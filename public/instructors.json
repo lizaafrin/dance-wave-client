@@ -1,0 +1,130 @@
+[
+    {
+        "_id": "1",
+        "image": "https://www.freepik.com/free-photo/female-entrepreneur_5766381.htm#query=instructor&position=26&from_view=search&track=sph",
+        "name": "Julia Anderson",
+        "email": "julia.anderson@example.com",
+        "bio": "Julia Anderson is a professional ballet dancer and instructor with over 15 years of experience. She has performed with renowned ballet companies and loves sharing her passion for ballet with aspiring dancers.",
+        "number-of-classes": 2
+      },
+      {
+        "_id": "2",
+        "image": "michael_johnson.jpg",
+        "name": "Michael Johnson",
+        "email": "michael.johnson@example.com",
+        "bio": "Michael Johnson is a versatile ballet dancer and instructor. With his strong technical skills and artistic expression, he aims to inspire his students to push their boundaries and reach new heights.",
+        "number-of-classes": 1
+      },
+      {
+        "_id": "3",
+        "image": "olivia_smith.jpg",
+        "name": "Olivia Smith",
+        "email": "olivia.smith@example.com",
+        "bio": "Olivia Smith is a seasoned ballet professional with a passion for teaching. She believes in nurturing each student's unique artistry while instilling discipline and precision in their technique.",
+        "number-of-classes": 1
+      },
+      {
+        "_id": "4",
+        "image": "carlos_rodriguez.jpg",
+        "name": "Carlos Rodriguez",
+        "email": "carlos.rodriguez@example.com",
+        "bio": "Carlos Rodriguez is a charismatic salsa instructor known for his infectious energy and engaging teaching style. He aims to make salsa accessible to everyone and create a vibrant and supportive learning environment.",
+        "number-of-classes": 2
+      },    
+      {
+        "_id": "5",
+        "image": "maria_garcia.jpg",
+        "name": "Maria Garcia",
+        "email": "maria.garcia@example.com",
+        "bio": "Maria Garcia is a talented salsa dancer and instructor. With her strong technical foundation and passion for salsa, she strives to help her students develop their own style and express themselves through dance.",
+        "number-of-classes": 1
+      },
+      {
+        "_id": "6",
+        "image": "juan_martinez.jpg",
+        "name": "Juan Martinez",
+        "email": "juan.martinez@example.com",
+        "bio": "Juan Martinez is a skilled salsa instructor specializing in partnerwork. He focuses on connection, communication, and musicality to create seamless partnerships on the dance floor.",
+        "number-of-classes": 1
+      },
+      {
+        "_id": "7",
+        "image": "sophie_thompson.jpg",
+        "name": "Sophie Thompson",
+        "email": "sophie.thompson@example.com",
+        "bio": "Sophie Thompson is a passionate dance educator who loves teaching classic dance to children. She creates a nurturing and joyful environment where kids can explore their creativity and develop their dance skills.",
+        "number-of-classes": 1
+      },
+      {
+        "_id": "8",
+        "image": "david_wilson.jpg",
+        "name": "David Wilson",
+        "email": "david.wilson@example.com",
+        "bio": "David Wilson is a dedicated ballet instructor for adults. He believes that dance is for everyone, regardless of age or experience, and strives to create a supportive and inclusive space for adults to pursue their ballet dreams.",
+        "number-of-classes": 1
+      },
+      {
+        "_id": "9",
+        "image": "jessica-brown.jpg",
+        "name": "Jessica Brown",
+        "email": "jessicabrown@example.com",
+        "bio": "Jessica Brown is a dedicated ballet instructor with a focus on teaching young children. She creates a nurturing and playful environment where kids can explore ballet and develop a love for dance.",
+        "number-of-classes": 1
+      },
+      {
+        "_id": "10",
+        "image": "chris_johnson.jpg",
+        "name": "Chris Johnson",
+        "email": "chris.johnson@example.com",
+        "bio": "Chris Johnson is an experienced hip-hop dancer and instructor. His energetic teaching style and innovative choreography inspire students to push their limits and explore the boundaries of hip-hop dance.",
+        "number-of-classes": 1
+      },
+      {
+        "_id": "11",
+        "image": "emily_roberts.jpg",
+        "name": "Emily Roberts",
+        "email": "emily.roberts@example.com",
+        "bio": "Emily Roberts is a passionate hip-hop dance instructor with a background in street dance styles. She loves to share her knowledge and creativity with her students, helping them develop their own unique style.",
+        "number-of-classes": 2
+      },
+      {
+        "_id": "12",
+        "image": "emily_thompson.jpg",
+        "name": "Emily Thompson",
+        "email": "emily.thompson@example.com",
+        "bio": "Emily Thompson is a dedicated ballet instructor specializing in pointe technique. With her expertise and attention to detail, she helps students develop strength and grace for dancing on pointe.",
+        "number-of-classes": 1
+      },
+      {
+        "_id": "13",
+        "image": "ricardo_perez.jpg",
+        "name": "Ricardo Perez",
+        "email": "ricardo.perez@example.com",
+        "bio": "Ricardo Perez is a talented salsa dancer and instructor known for his dynamic and fluid style. He loves to share his passion for salsa and help students master the techniques and rhythms of this vibrant dance form.",
+        "number-of-classes": 1
+      },
+      {
+        "_id": "14",
+        "image": "sophia_miller.jpg",
+        "name": "Sophia Miller",
+        "email": "sophia.miller@example.com",
+        "bio": "Sophia Miller is a versatile dance instructor with expertise in classic and contemporary styles. Her classes focus on technique, musicality, and artistic expression, allowing students to explore the beauty of dance.",
+        "number-of-classes": 1
+      },
+      {
+        "_id": "15",
+        "image": "alex_rodriguez.jpg",
+        "name": "Alex Rodriguez",
+        "email": "alex.rodriguez@example.com",
+        "bio": "Alex Rodriguez is a talented breakdancer and instructor. He specializes in teaching breakdance fundamentals, emphasizing creativity, strength, and mastery of foundational moves.",
+        "number-of-classes": 1
+      },
+      {
+        "_id": "16",
+        "image": "emma_davis.jpg",
+        "name": "Emma Davis",
+        "email": "emma.davis@example.com",
+        "bio": "Emma Davis is a passionate dance instructor known for her expertise in jazz fusion. She loves blending different dance styles to create unique choreography and encourages her students to express themselves through movement.",
+        "number-of-classes": 1
+      }
+]

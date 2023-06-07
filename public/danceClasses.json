@@ -1,0 +1,162 @@
+[
+    {
+        "_id": "1",
+        "name": "Beginner Ballet",
+        "category": "Ballet",
+        "instructor-name": "Julia Anderson",
+        "availableSeats": 15,
+        "fee": 50,
+        "details": "This class is designed for beginners who want to learn the fundamentals of ballet. No prior experience required.",
+        "image": "https://cristianonew.ukrdevs.com/wp-content/uploads/2016/08/product-1-370x247.jpg"
+    },
+    {
+        "_id": "2",
+        "name": "Intermediate Ballet",
+        "category": "Ballet",
+        "instructor-name": "Michael Johnson",
+        "availableSeats": 12,
+        "fee": 60,
+        "details": "Take your ballet skills to the next level with this intermediate class. Previous ballet experience recommended.",
+        "image": "https://www.freepik.com/free-photo/little-ballerina-dancing-with-personal-ballet-teacher-dance-studio_6607089.htm#query=ballet%20dance&position=4&from_view=search&track=ais"
+    },
+    {
+        "_id": "3",
+        "name": "Advanced Ballet",
+        "category": "Ballet",
+        "instructor-name": "Olivia Smith",
+        "availableSeats": 10,
+        "fee": 70,
+        "details": "For experienced ballet dancers who want to refine their technique and learn more advanced choreography.",
+        "image": "https://www.freepik.com/free-photo/little-ballerina-dancing-with-personal-ballet-teacher-dance-studio_6607089.htm#query=ballet%20dance&position=4&from_view=search&track=ais"
+    },
+    {
+        "_id": "4",
+        "name": "Salsa Basics",
+        "category": "Salsa",
+        "instructor-name": "Carlos Rodriguez",
+        "availableSeats": 20,
+        "fee": 45,
+        "details": "Learn the basic steps and movements of salsa in this fun and energetic class. No partner required.",
+        "image": "salsa1.jpg"
+    },
+    {
+        "_id": "5",
+        "name": "Intermediate Salsa",
+        "category": "Salsa",
+        "instructor-name": "Maria Garcia",
+        "availableSeats": 18,
+        "fee": 55,
+        "details": "Build upon your salsa foundation and learn more complex patterns and styling.",
+        "image": "salsa2.jpg"
+    },
+    {
+        "_id": "6",
+        "name": "Salsa Partnerwork",
+        "category": "Salsa",
+        "instructor-name": "Juan Martinez",
+        "availableSeats": 14,
+        "fee": 65,
+        "details": "Focus on partnering techniques and improve your lead/follow skills in salsa dancing.",
+        "image": "salsa3.jpg"
+    },
+    {
+        "_id": "7",
+        "name": "Classic Dance for Kids",
+        "category": "Classic",
+        "instructor-name": "Sophie Thompson",
+        "availableSeats": 15,
+        "fee": 40,
+        "details": "Introduce your kids to the world of classic dance in this fun and engaging class.",
+        "image": "classic1.jpg"
+    },
+    {
+        "_id": "8",
+        "name": "Adult Classic Ballet",
+        "category": "Classic",
+        "instructor-name": "David Wilson",
+        "availableSeats": 12,
+        "fee": 55,
+        "details": "A classic ballet class designed specifically for adults. All skill levels welcome.",
+        "image": "classic2.jpg"
+    },
+    {
+        "_id": "9",
+        "name": "Hip-Hop Basics",
+        "category": "Hip-Hop",
+        "instructor-name": "Jessica Brown",
+        "availableSeats": 20,
+        "fee": 50,
+        "details": "Learn the basic moves and grooves of hip-hop in this high-energy class.",
+        "image": "hiphop1.jpg"
+    },
+    {
+        "_id": "10",
+        "name": "Intermediate Hip-Hop",
+        "category": "Hip-Hop",
+        "instructor-name": "Chris Johnson",
+        "availableSeats": 18,
+        "fee": 60,
+        "details": "Take your hip-hop skills to the next level with more complex choreography and freestyle techniques.",
+        "image": "hiphop2.jpg"
+    },
+    {
+        "_id": "11",
+        "name": "Street Dance Workshop",
+        "category": "Hip-Hop",
+        "instructor-name": "Emily Roberts",
+        "availableSeats": 15,
+        "fee": 70,
+        "details": "Explore various street dance styles, including popping, locking, and breaking, in this dynamic workshop.",
+        "image": "hiphop3.jpg"
+    },
+    {
+        "_id": "12",
+        "name": "Pointe Technique",
+        "category": "Ballet",
+        "instructor-name": "Emily Thompson",
+        "availableSeats": 8,
+        "fee": 80,
+        "details": "This class focuses on developing strength and technique for dancing on pointe. Prior ballet experience and approval required.",
+        "image": "https://www.freepik.com/free-photo/little-ballerina-dancing-with-personal-ballet-teacher-dance-studio_6607089.htm#query=ballet%20dance&position=4&from_view=search&track=ais"
+    },
+    {
+        "_id": "13",
+        "name": "Salsa Styling",
+        "category": "Salsa",
+        "instructor-name": "Ricardo Perez",
+        "availableSeats": 10,
+        "fee": 70,
+        "details": "Learn how to add flair and individual style to your salsa dancing with this styling-focused class.",
+        "image": "salsa4.jpg"
+    },
+    {
+        "_id": "14",
+        "name": "Contemporary Dance",
+        "category": "Classic",
+        "instructor-name": "Sophia Miller",
+        "availableSeats": 12,
+        "fee": 65,
+        "details": "Explore the fusion of ballet and modern dance in this expressive and fluid contemporary dance class.",
+        "image": "classic3.jpg"
+    },
+    {
+        "_id": "15",
+        "name": "Breakdance Fundamentals",
+        "category": "Hip-Hop",
+        "instructor-name": "Alex Rodriguez",
+        "availableSeats": 15,
+        "fee": 55,
+        "details": "Master the foundational moves of breakdancing, including toprock, footwork, and power moves.",
+        "image": "hiphop4.jpg"
+    },
+    {
+        "_id": "16",
+        "name": "Jazz Fusion",
+        "category": "Classic",
+        "instructor-name": "Emma Davis",
+        "availableSeats": 10,
+        "fee": 60,
+        "details": "Experience the dynamic blend of jazz and contemporary dance styles in this fusion class.",
+        "image": "classic4.jpg"
+    }
+]
