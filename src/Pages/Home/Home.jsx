@@ -1,11 +1,11 @@
 import React from 'react';
-import Banner from '../Banner/Banner';
-import Category from '../Category/Category';
-import PopularClass from '../PopularClass';
-import FeaturedClass from '../FeaturedClass/FeaturedClass';
-import PopularInstructor from './PopularInstructor';
-import Feedback from '../Feedback';
+import Banner from '../Home/Banner';
+import Category from '../Home/Category';
+import PopularClass from '../Home/PopularClass';
+import FeaturedClass from '../Home/FeaturedClass/FeaturedClass';
+import PopularInstructor from '../Home/PopularInstructor';
 import { Helmet } from 'react-helmet-async';
+import Feedback from '../Home/Feedback';
 
 const Home = () => {
     return (
@@ -19,6 +19,7 @@ const Home = () => {
             <FeaturedClass></FeaturedClass>
             <PopularInstructor></PopularInstructor>
             <Feedback></Feedback>
+            
         </div>
     );
 };

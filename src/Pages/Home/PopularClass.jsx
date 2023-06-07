@@ -22,7 +22,7 @@ const PopularClass = () => {
             <SectionTitle subHeading={"Popular Classes"}
                 heading={"From Our Classes"}></SectionTitle>
 
-        <div className='grid md:grid-cols-3 gap-4'>
+        <div className='grid md:grid-cols-3 gap-6'>
             {
                 classes.slice(0,6).map(item => <Class
                 key ={item._id}

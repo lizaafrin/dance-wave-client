@@ -3,8 +3,7 @@ import {
 
 } from "react-router-dom";
 import Main from "../Layout/Main";
-import Header from "../Pages/Shared/Header";
-import Home from "../Pages/Home/Home/Home";
+import Home from "../Pages/Home/Home";
 
 import Classic from "../Pages/OurClasses/Classic";
 import Ballet from "../Pages/OurClasses/Ballet";

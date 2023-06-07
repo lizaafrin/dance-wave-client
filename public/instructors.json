@@ -1,15 +1,16 @@
 [
-    {
-        "_id": "1",
-        "image": "https://www.freepik.com/free-photo/female-entrepreneur_5766381.htm#query=instructor&position=26&from_view=search&track=sph",
-        "name": "Julia Anderson",
-        "email": "julia.anderson@example.com",
-        "bio": "Julia Anderson is a professional ballet dancer and instructor with over 15 years of experience. She has performed with renowned ballet companies and loves sharing her passion for ballet with aspiring dancers.",
-        "number-of-classes": 2
+    
+      {
+        "_id": "14",
+        "image": "https://img.freepik.com/free-photo/female-entrepreneur_1098-19604.jpg?w=1380&t=st=1686161361~exp=1686161961~hmac=1130d5d020bc445e9b3e4a07edba14133c4cec28383ab185225d3c434a7b7f6b",
+        "name": "Sophia Miller",
+        "email": "sophia.miller@example.com",
+        "bio": "Sophia Miller is a versatile dance instructor with expertise in classic and contemporary styles. Her classes focus on technique, musicality, and artistic expression, allowing students to explore the beauty of dance.",
+        "number-of-classes": 1
       },
       {
         "_id": "2",
-        "image": "michael_johnson.jpg",
+        "image": "https://img.freepik.com/free-photo/handsome-young-dancer_1163-1387.jpg?w=1380&t=st=1686161692~exp=1686162292~hmac=554ab5f9111fa2dafa02cc6133307c2d4615e8e06b0ef8ba3d3a4744b2013de2",
         "name": "Michael Johnson",
         "email": "michael.johnson@example.com",
         "bio": "Michael Johnson is a versatile ballet dancer and instructor. With his strong technical skills and artistic expression, he aims to inspire his students to push their boundaries and reach new heights.",
@@ -17,7 +18,7 @@
       },
       {
         "_id": "3",
-        "image": "olivia_smith.jpg",
+        "image": "https://img.freepik.com/free-photo/hip-hop-dancer_144627-9939.jpg?w=1380&t=st=1686161740~exp=1686162340~hmac=0654b7ceedf4dd0bc7b3a4a4ac9bcea94b09ced899e6081f30149c1ba7db81b9",
         "name": "Olivia Smith",
         "email": "olivia.smith@example.com",
         "bio": "Olivia Smith is a seasoned ballet professional with a passion for teaching. She believes in nurturing each student's unique artistry while instilling discipline and precision in their technique.",
@@ -25,23 +26,23 @@
       },
       {
         "_id": "4",
-        "image": "carlos_rodriguez.jpg",
+        "image": "https://img.freepik.com/free-photo/portrait-young-male-breakdancer-against-wall_23-2147847266.jpg?w=1380&t=st=1686161931~exp=1686162531~hmac=370a1099e9a7b1da138ba328ebbdd5f3eb7dc9f48c64b5e1f1dc6242584c38ef",
         "name": "Carlos Rodriguez",
         "email": "carlos.rodriguez@example.com",
         "bio": "Carlos Rodriguez is a charismatic salsa instructor known for his infectious energy and engaging teaching style. He aims to make salsa accessible to everyone and create a vibrant and supportive learning environment.",
         "number-of-classes": 2
-      },    
+      },
       {
         "_id": "5",
-        "image": "maria_garcia.jpg",
-        "name": "Maria Garcia",
-        "email": "maria.garcia@example.com",
-        "bio": "Maria Garcia is a talented salsa dancer and instructor. With her strong technical foundation and passion for salsa, she strives to help her students develop their own style and express themselves through dance.",
-        "number-of-classes": 1
+        "image": "https://img.freepik.com/free-photo/pretty-woman-practising-hip-hop-dance_107420-85011.jpg?w=1380&t=st=1686161782~exp=1686162382~hmac=d6b84c51560a31b8202f4e29e5b140d55bb582d587ecb1833b63631f07b50f39",
+        "name": "Emily Roberts",
+        "email": "emily.roberts@example.com",
+        "bio": "Emily Roberts is a passionate hip-hop dance instructor with a background in street dance styles. She loves to share her knowledge and creativity with her students, helping them develop their own unique style.",
+        "number-of-classes": 2
       },
       {
         "_id": "6",
-        "image": "juan_martinez.jpg",
+        "image": "https://img.freepik.com/free-photo/two-young-professional-dancers-training-isolated-gradient-blue-purple-wall_155003-44519.jpg?w=1380&t=st=1686162064~exp=1686162664~hmac=904725940013e1ebb9e27aa84cfe871103b567a1fdd807068d5896596f8d66de",
         "name": "Juan Martinez",
         "email": "juan.martinez@example.com",
         "bio": "Juan Martinez is a skilled salsa instructor specializing in partnerwork. He focuses on connection, communication, and musicality to create seamless partnerships on the dance floor.",
@@ -49,7 +50,7 @@
       },
       {
         "_id": "7",
-        "image": "sophie_thompson.jpg",
+        "image": "https://img.freepik.com/free-photo/people-having-fun-zumba-class_23-2149074857.jpg?w=1380&t=st=1686161805~exp=1686162405~hmac=43d1d1850419438d7e64af19da7f010aec2c1579161f8141749a43d582ef38a8",
         "name": "Sophie Thompson",
         "email": "sophie.thompson@example.com",
         "bio": "Sophie Thompson is a passionate dance educator who loves teaching classic dance to children. She creates a nurturing and joyful environment where kids can explore their creativity and develop their dance skills.",
@@ -57,10 +58,10 @@
       },
       {
         "_id": "8",
-        "image": "david_wilson.jpg",
-        "name": "David Wilson",
-        "email": "david.wilson@example.com",
-        "bio": "David Wilson is a dedicated ballet instructor for adults. He believes that dance is for everyone, regardless of age or experience, and strives to create a supportive and inclusive space for adults to pursue their ballet dreams.",
+        "image": "https://img.freepik.com/free-photo/full-shot-man-ballet-dancing_23-2149180639.jpg?w=1380&t=st=1686162216~exp=1686162816~hmac=c5b495f6685ed7e88be8dd9811f44c14854e14588fdb2a7e2e5d58446ac2e46c",
+        "name": "Chris Johnson",
+        "email": "chris.johnson@example.com",
+        "bio": "Chris Johnson is an experienced hip-hop dancer and instructor. His energetic teaching style and innovative choreography inspire students to push their limits and explore the boundaries of hip-hop dance.",
         "number-of-classes": 1
       },
       {
@@ -73,19 +74,19 @@
       },
       {
         "_id": "10",
-        "image": "chris_johnson.jpg",
-        "name": "Chris Johnson",
-        "email": "chris.johnson@example.com",
-        "bio": "Chris Johnson is an experienced hip-hop dancer and instructor. His energetic teaching style and innovative choreography inspire students to push their limits and explore the boundaries of hip-hop dance.",
+        "image": "https://img.freepik.com/free-photo/full-shot-man-ballet-dancing_23-2149180639.jpg?w=1380&t=st=1686162216~exp=1686162816~hmac=c5b495f6685ed7e88be8dd9811f44c14854e14588fdb2a7e2e5d58446ac2e46c",
+        "name": "David Wilson",
+        "email": "david.wilson@example.com",
+        "bio": "David Wilson is a dedicated ballet instructor for adults. He believes that dance is for everyone, regardless of age or experience, and strives to create a supportive and inclusive space for adults to pursue their ballet dreams.",
         "number-of-classes": 1
       },
       {
         "_id": "11",
-        "image": "emily_roberts.jpg",
-        "name": "Emily Roberts",
-        "email": "emily.roberts@example.com",
-        "bio": "Emily Roberts is a passionate hip-hop dance instructor with a background in street dance styles. She loves to share her knowledge and creativity with her students, helping them develop their own unique style.",
-        "number-of-classes": 2
+        "image": "https://img.freepik.com/free-photo/pretty-woman-practising-hip-hop-dance_107420-85011.jpg?w=1380&t=st=1686161782~exp=1686162382~hmac=d6b84c51560a31b8202f4e29e5b140d55bb582d587ecb1833b63631f07b50f39",
+        "name": "Maria Garcia",
+        "email": "maria.garcia@example.com",
+        "bio": "Maria Garcia is a talented salsa dancer and instructor. With her strong technical foundation and passion for salsa, she strives to help her students develop their own style and express themselves through dance.",
+        "number-of-classes": 1
       },
       {
         "_id": "12",
@@ -105,11 +106,11 @@
       },
       {
         "_id": "14",
-        "image": "sophia_miller.jpg",
-        "name": "Sophia Miller",
-        "email": "sophia.miller@example.com",
-        "bio": "Sophia Miller is a versatile dance instructor with expertise in classic and contemporary styles. Her classes focus on technique, musicality, and artistic expression, allowing students to explore the beauty of dance.",
-        "number-of-classes": 1
+        "image": "https://img.freepik.com/free-photo/female-entrepreneur_1098-19604.jpg?w=1380&t=st=1686161361~exp=1686161961~hmac=1130d5d020bc445e9b3e4a07edba14133c4cec28383ab185225d3c434a7b7f6b",
+        "name": "Julia Anderson",
+        "email": "julia.anderson@example.com",
+        "bio": "Julia Anderson is a professional ballet dancer and instructor with over 15 years of experience. She has performed with renowned ballet companies and loves sharing her passion for ballet with aspiring dancers.",
+        "number-of-classes": 2
       },
       {
         "_id": "15",

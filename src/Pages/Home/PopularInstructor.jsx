@@ -1,8 +1,8 @@
 import React from 'react';
-import Instructor from '../../Shared/Instructor';
+import Instructor from '../Shared/Instructor';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import SectionTitle from '../../../components/Sectiontitle/SectionTitle';
+import SectionTitle from '../../components/Sectiontitle/SectionTitle';
 
 const PopularInstructor = () => {
     const [instructors, setInstructors]= useState([]);
