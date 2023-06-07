@@ -18,7 +18,7 @@ const PopularInstructor = () => {
             <SectionTitle subHeading={"Popular Instructor"}
                 heading={"From Our Instructors"}></SectionTitle>
 
-            <div className='grid md:grid-cols-3 gap-4'>
+            <div className='grid md:grid-cols-3 gap-4 mt-12'>
                 {
                     instructors.slice(0,6).map(item =><Instructor
                         key={item._id}
