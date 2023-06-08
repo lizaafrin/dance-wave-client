@@ -6,6 +6,7 @@ const Header = () => {
     const navItems = <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/classes'>Classes</Link></li>
+        <li><Link to='/enroll/ballet'>EnRoll Now</Link></li>
         <li><Link to='/instructors'>Instructors</Link></li>
         <li><Link to='/dashboard'>Dashboard</Link></li>
     </>
@@ -33,7 +34,7 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Login</a>
+                    <Link to='/login'className="btn">Login</Link>
                 </div>
             </div>
 
