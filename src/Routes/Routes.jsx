@@ -5,8 +5,9 @@ import {
 import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home";
 
-import Classic from "../Pages/OurClasses/Classic";
+import Classic from "../Pages/OurClasses/AllDanceClass";
 import Ballet from "../Pages/OurClasses/Ballet";
+import AllDanceClass from "../Pages/OurClasses/AllDanceClass";
 
 
 export const router = createBrowserRouter([
@@ -22,13 +23,13 @@ export const router = createBrowserRouter([
             
             {
                 path: '/classes',
-                element: <Classic></Classic>,
+                element: <AllDanceClass></AllDanceClass>,
             },
             
-            {
-                path: '/classes',
-                element: <Ballet></Ballet>,
-            },
+            // {
+            //     path: '/classes',
+            //     element: <Ballet></Ballet>,
+            // },
             
 
             // {
