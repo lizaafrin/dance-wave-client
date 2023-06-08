@@ -4,12 +4,10 @@ import {
 } from "react-router-dom";
 import Main from "../Layout/Main";
 import Home from "../Pages/Home/Home";
-
-import Classic from "../Pages/OurClasses/AllDanceClass";
-import Ballet from "../Pages/OurClasses/Ballet";
 import AllDanceClass from "../Pages/OurClasses/AllDanceClass";
 import Enroll from "../Pages/EnrollClass/Enroll";
 import LogIn from "../Pages/LogIn/LogIn";
+import SignUp from "../Pages/SignUp/SignUp";
 
 
 export const router = createBrowserRouter([
@@ -34,6 +32,10 @@ export const router = createBrowserRouter([
             {
                 path: '/login',
                 element: <LogIn></LogIn>,
+            },
+            {
+                path: '/signup',
+                element: <SignUp></SignUp>,
             },
             
             // {
