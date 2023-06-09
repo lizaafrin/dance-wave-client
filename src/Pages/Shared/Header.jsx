@@ -1,16 +1,36 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '/logo.png';
+import { AuthContext } from '../../provider/AuthProvider';
+import { InfinitySpin } from 'react-loader-spinner';
 
 const Header = () => {
+    const { user, loading, logOut } = useContext(AuthContext);
+    // console.log(user?.photoURL);
+    const handleSignOut = () => {
+        logOut()
+            .then((result) => { })
+            .catch((error) => console.log(error));
+    };
     const navItems = <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/classes'>Classes</Link></li>
         <li><Link to='/enroll/ballet'>EnRoll Now</Link></li>
         <li><Link to='/instructors'>Instructors</Link></li>
-        <li><Link to='/dashboard'>Dashboard</Link></li>
-    </>
+        {user && <li><Link to='/dashboard'>Dashboard</Link></li>}
 
+    </>
+    if (loading) {
+        return (
+            <div className='flex justify-center'>
+                <InfinitySpin
+                    width='200'
+                    color="#4fa94d"
+                />
+            </div>
+        )
+    }
+    
     return (
         <>
             <div className="navbar bg-slate-700 text-black lg:text-white fixed z-10 max-w-screen-xl bg-opacity-60">
@@ -34,7 +54,18 @@ const Header = () => {
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <Link to='/login'className="btn">Login</Link>
+                    {user ?
+                        <>
+                            <img className='w-12 h-12 rounded-full' src={user?.photoURL} title={user?.displayName} />
+                            <button
+                                className="hover:bg-fuchsia-700 lg:px-4 py-3 rounded-lg"
+                                onClick={handleSignOut}
+                            >
+                                Sign out
+                            </button></> :
+                        <Link to='/login' className="btn">Login</Link>
+
+                    }
                 </div>
             </div>
 

@@ -8,6 +8,8 @@ import AllDanceClass from "../Pages/OurClasses/AllDanceClass";
 import Enroll from "../Pages/EnrollClass/Enroll";
 import LogIn from "../Pages/LogIn/LogIn";
 import SignUp from "../Pages/SignUp/SignUp";
+import Dashboard from "../Pages/Dashboard/Dashboard";
+import PrivateRoute from "./PrivateRoute";
 
 
 export const router = createBrowserRouter([
@@ -36,6 +38,12 @@ export const router = createBrowserRouter([
             {
                 path: '/signup',
                 element: <SignUp></SignUp>,
+            },
+            {
+                path: '/dashboard',
+                element: <PrivateRoute>
+                    <Dashboard></Dashboard>
+                </PrivateRoute>,
             },
             
             // {

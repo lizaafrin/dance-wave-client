@@ -14,10 +14,10 @@ const Enroll = () => {
     const [classes] = useClass();
     const categories = ['Salsa', 'Ballet', 'Classic', 'Hip-Hop'];
     const { category } = useParams();
-    console.log(category);
+    // console.log(category);
 
     const initialIndex = categories.indexOf(category);
-    console.log(initialIndex);
+    // console.log(initialIndex);
     const [tabIndex, setTabIndex] = useState(initialIndex);
     const classic = classes.filter(item => item.category === 'Classic');
     const ballet = classes.filter(item => item.category === 'Ballet');

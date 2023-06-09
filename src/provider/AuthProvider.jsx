@@ -18,8 +18,7 @@ export const AuthContext = createContext(null);
 const auth = getAuth(app);
 
 const AuthProvider = ({ children }) => {
-    // const [toyInfo, settoyInfo] = useState([]);
-    const [user, setUser] = useState(null);
+    const [user, setUser] = useState('');
     const [loading, setLoading] = useState(true);
     console.log(user);
 
@@ -48,17 +47,6 @@ const AuthProvider = ({ children }) => {
         });
     }
 
-    // useEffect(() => {
-    //     fetch("https://edujoy-toy-serverside.vercel.app/toys")
-    //         .then((res) => res.json())
-    //         .then((data) => {
-    //             settoyInfo(data);
-    //             setLoading(true);
-    //         })
-    //         .catch((err) => console.log(err));
-    // }, []);
-    // console.log(user);
-
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, (loggedUser) => {
             // console.log("Logged in user inside auth state Observer", loggedUser);
@@ -68,7 +56,7 @@ const AuthProvider = ({ children }) => {
         return () => {
             unsubscribe();
         };
-    }, []);
+    }, [user]);
 
     const authInfo = {
         user,
