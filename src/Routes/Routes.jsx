@@ -10,6 +10,7 @@ import LogIn from "../Pages/LogIn/LogIn";
 import SignUp from "../Pages/SignUp/SignUp";
 import Dashboard from "../Pages/Dashboard/Dashboard";
 import PrivateRoute from "./PrivateRoute";
+import DashboardLayout from "../Layout/DashboardLayout";
 
 
 export const router = createBrowserRouter([
@@ -21,8 +22,8 @@ export const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home></Home>,
-            }, 
-            
+            },
+
             {
                 path: '/classes',
                 element: <AllDanceClass></AllDanceClass>,
@@ -39,44 +40,20 @@ export const router = createBrowserRouter([
                 path: '/signup',
                 element: <SignUp></SignUp>,
             },
-            {
-                path: '/dashboard',
-                element: <PrivateRoute>
-                    <Dashboard></Dashboard>
-                </PrivateRoute>,
-            },
-            
-            // {
-            //     path: '/classes',
-            //     element: <Ballet></Ballet>,
-            // },
-            
-
-            // {
-            //     path: '/',
-            //     element: <Home></Home>,
-            // },
-            // {
-            //     path: '/menu',
-            //     element: <Menu></Menu>,
-            // },
-            // {
-            //     path: '/order/:category',
-            //     element: <Order></Order>,
-            // },
-            // {
-            //     path: '/login',
-            //     element: <Login></Login>,
-            // },
-            // {
-            //     path: '/signup',
-            //     element: <SignUp></SignUp>,
-            // },
-            // {
-            //     path: '/secret',
-            //     element: <PrivateRoute><Secret></Secret></PrivateRoute>,
-            // },
         ],
-
     },
+    {
+
+        path: '/dashboard',
+        element: <PrivateRoute>
+            <DashboardLayout></DashboardLayout>
+        </PrivateRoute>,
+        children:[
+            {
+                path: '/dashboard/classes',
+                element: <Dashboard></Dashboard>
+            }
+        ]
+
+    }
 ]);

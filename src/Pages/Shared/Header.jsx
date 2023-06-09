@@ -17,7 +17,7 @@ const Header = () => {
         <li><Link to='/classes'>Classes</Link></li>
         <li><Link to='/enroll/ballet'>EnRoll Now</Link></li>
         <li><Link to='/instructors'>Instructors</Link></li>
-        {user && <li><Link to='/dashboard'>Dashboard</Link></li>}
+        {user && <li><Link to='/dashboard/classes'>Dashboard</Link></li>}
 
     </>
     if (loading) {
