@@ -39,7 +39,7 @@ const SignUp = () => {
                 
                 updateUserProfile(name, photoURL)
                     .then(() => {
-                        const savedUser = { name: name, email: email, photoURL: photoURL };
+                        const savedUser = { name: name, email: email, photoURL: photoURL, role: 'student' };
                         console.log(savedUser);
                         fetch('http://localhost:5000/users', {
                             method: 'POST',
@@ -73,7 +73,7 @@ const SignUp = () => {
             .then(result => {
                 const loggedInUser = result.user;
                 console.log(loggedInUser);
-                const savedUser = { name: loggedInUser.displayName, email: loggedInUser.email, photoURL: loggedInUser.photoURL }
+                const savedUser = { name: loggedInUser.displayName, email: loggedInUser.email, photoURL: loggedInUser.photoURL, role: 'student' }
                 fetch('http://localhost:5000/users', {
                     method: 'POST',
                     headers: {

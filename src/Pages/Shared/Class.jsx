@@ -14,10 +14,10 @@ const Class = ({ item }) => {
     const location = useLocation();
     const [selectedClass, refetch] = useSelectedClass();
 
-    const handleSelect = item =>{   
+    const handleSelect = item =>{
         console.log(item);
         if(user && user.email){
-            const selectedClass = {selelectedclassId: _id , name ,instructorName, fee, email: user.email
+            const selectedClass = { name, instructorName, fee, email: user.email
             }
             fetch('http://localhost:5000/selectedclass',{
                 method: 'POST',

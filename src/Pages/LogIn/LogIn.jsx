@@ -49,7 +49,7 @@ const LogIn = () => {
             .then(result => {
                 const loggedInUser = result.user;
                 console.log(loggedInUser);
-                const savedUser = { name: loggedInUser.displayName, email: loggedInUser.email, photoURL: loggedInUser.photoURL }
+                const savedUser = { name: loggedInUser.displayName, email: loggedInUser.email, photoURL: loggedInUser.photoURL}
                 fetch('http://localhost:5000/users', {
                     method: 'POST',
                     headers: {

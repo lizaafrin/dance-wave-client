@@ -122,7 +122,6 @@ const AllUsers = () => {
                             <td>
                                 <button className=' btn-ghost bg-orange-300 text-xl rounded-lg'><FaUserGraduate></FaUserGraduate></button>
                             </td>
-                            <td><button onClick={() => handleDelete(user)}className="btn btn-ghost bg-gray-200 text-black"><FaTrashAlt></FaTrashAlt></button></td>
                         </tr>)
                     }
                 </tbody>

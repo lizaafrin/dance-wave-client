@@ -21,7 +21,21 @@ const auth = getAuth(app);
 const AuthProvider = ({ children }) => {
     const [user, setUser] = useState('');
     const [loading, setLoading] = useState(true);
-    console.log(user);
+    const [userData, setUserData] = useState([]);
+    // const [userData, setUserData] = useState([])
+
+    // console.log(user);
+
+    useEffect(() => {
+        fetch('http://localhost:5000/users')
+            .then(res => res.json())
+            .then(data => {
+                setLoading(true)
+                setUserData(data);
+            })
+    }, [])
+    
+    // console.log(currentUser);
 
     const createUser = (email, password) => {
         setLoading(true);
@@ -56,7 +70,7 @@ const AuthProvider = ({ children }) => {
             if(loggedUser){
                 axios.post('http://localhost:5000/jwt',{email: loggedUser.email})
                 .then(data => {
-                    console.log(data.data);
+                    // console.log(data.data);
                     localStorage.setItem('access-token', data.data.token);
                     // setLoading(false);
                 })
@@ -74,6 +88,7 @@ const AuthProvider = ({ children }) => {
     const authInfo = {
         user,
         loading,
+        userData,
         createUser,
         setUser,
         signIn,
