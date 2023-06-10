@@ -14,11 +14,11 @@ const Enroll = () => {
     const [classes] = useClass();
     const categories = ['Salsa', 'Ballet', 'Classic', 'Hip-Hop'];
     const { category } = useParams();
-    // console.log(category);
+    console.log(category);
 
     const initialIndex = categories.indexOf(category);
-    // console.log(initialIndex);
     const [tabIndex, setTabIndex] = useState(initialIndex);
+    console.log(tabIndex);
     const classic = classes.filter(item => item.category === 'Classic');
     const ballet = classes.filter(item => item.category === 'Ballet');
     const salsa = classes.filter(item => item.category === 'Salsa');
@@ -37,7 +37,7 @@ const Enroll = () => {
                 <a className="tab tab-bordered">Salsa</a>
                 <a className="tab tab-bordered">hip-Hop</a>
             </div> */}
-            <Tabs defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
+            <Tabs className='mt-10 mb-10 justify-center items-center' defaultIndex={tabIndex+1} onSelect={(index) => setTabIndex(index)}>
                 <TabList>
                     <Tab>Salsa</Tab>
                     <Tab>Ballet</Tab>

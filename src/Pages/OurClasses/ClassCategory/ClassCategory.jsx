@@ -19,7 +19,7 @@ const ClassCategory = ({ items, title, img }) => {
                 }
             </div>
             <Link to={`/enroll/${title}`}>
-                <button className="btn btn-outline bg-lime-100 text-center my-4 block mx-auto border-t-4 border-b-4">Choose your Favourite dance</button>
+                <button className="btn btn-outline bg-lime-100 text-center my-4 block mx-auto border-t-4 border-b-4">See All Classes of this category</button>
             </Link>
         </div>
     );

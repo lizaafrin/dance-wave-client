@@ -4,19 +4,20 @@ import { useContext } from 'react';
 import { AuthContext } from '../../provider/AuthProvider';
 import { useLocation, useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import useSelectedClass from '../../Hooks/useSelectedClass';
 
 const Class = ({ item }) => {
-    const { name, details, image, fee,instructorName,availableSeats
+    const { name, details, image, fee,instructorName,availableSeats, _id
     } = item;
     const {user} = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
-    // const mySelectedClass = []
-    const handleSelect = item =>{
-        // localStorage.setItem('myclasses',JSON.stringify( item));
+    const [selectedClass, refetch] = useSelectedClass();
+
+    const handleSelect = item =>{   
         console.log(item);
-        if(user){
-            const selectedClass = {name,instructorName, fee, email: user.email
+        if(user && user.email){
+            const selectedClass = {selelectedclassId: _id , name ,instructorName, fee, email: user.email
             }
             fetch('http://localhost:5000/selectedclass',{
                 method: 'POST',
@@ -28,6 +29,7 @@ const Class = ({ item }) => {
             .then(res=> res.json())
             .then(data => {
                 console.log(data);
+                // refetch();
                 if(data.insertedId){
                     Swal.fire({
                         position: 'top-end',

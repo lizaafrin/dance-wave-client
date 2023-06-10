@@ -8,15 +8,18 @@ import AllDanceClass from "../Pages/OurClasses/AllDanceClass";
 import Enroll from "../Pages/EnrollClass/Enroll";
 import LogIn from "../Pages/LogIn/LogIn";
 import SignUp from "../Pages/SignUp/SignUp";
-import Dashboard from "../Pages/Dashboard/Dashboard";
 import PrivateRoute from "./PrivateRoute";
 import DashboardLayout from "../Layout/DashboardLayout";
+import SelectedClass from "../Pages/Dashboard/SelectedClass";
+import AllUsers from "../Pages/Dashboard/AllUsers";
+import ErrorPage from "../Pages/Errorpage/ErrorPage";
 
 
 export const router = createBrowserRouter([
     {
         path: "/",
         element: <Main></Main>,
+        errorElement: <ErrorPage></ErrorPage>,
         children: [
 
             {
@@ -50,9 +53,13 @@ export const router = createBrowserRouter([
         </PrivateRoute>,
         children:[
             {
-                path: '/dashboard/classes',
-                element: <Dashboard></Dashboard>
-            }
+                path: '/dashboard/selectedclasses',
+                element: <SelectedClass></SelectedClass>
+            },
+            {
+                path: '/dashboard/allusers',
+                element: <AllUsers></AllUsers>
+            },
         ]
 
     }

@@ -36,6 +36,7 @@ const SignUp = () => {
             .then(result => {
                 const loggedUser = result.user;
                 console.log(loggedUser);
+                
                 updateUserProfile(name, photoURL)
                     .then(() => {
                         const savedUser = { name: name, email: email, photoURL: photoURL };
