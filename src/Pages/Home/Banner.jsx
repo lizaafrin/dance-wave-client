@@ -44,7 +44,7 @@ const Banner = () => {
                 <SwiperSlide><img className="" src={img5} /></SwiperSlide>
             </Swiper>
             <div className="absolute z-10 top-52 lg:top-80 w-3/4 lg:w-1/2 text-center mx-auto text-white bg-base-300 bg-opacity-50 px-10">
-                <h2 className="text-5xl py-10 font-bold">Welcome to DanceWave!</h2>
+                <h2 className="text-5xl text-purple-500 py-10 font-bold">Welcome to DanceWave!</h2>
                 <p className="pb-10 font-semibold">
                     Let danceWave be your catalyst for self-expression, artistic growth, and unforgettable memories. Get ready to ride the wave of dance and discover the joy of movement. Come join us today!"
                 </p>
