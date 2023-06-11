@@ -31,14 +31,9 @@ const Enroll = () => {
                 <title>DanceWave | Enroll Classes</title>
             </Helmet>
             <Cover img={enrollImg} title='Enroll now'></Cover>
-            {/* <div className="tabs justify-center mt-20">
-                <a className="tab tab-bordered">Ballet</a>
-                <a className="tab tab-bordered tab-active">Classic</a>
-                <a className="tab tab-bordered">Salsa</a>
-                <a className="tab tab-bordered">hip-Hop</a>
-            </div> */}
-            <Tabs className='mt-10 mb-10 justify-center items-center' defaultIndex={tabIndex+1} onSelect={(index) => setTabIndex(index)}>
-                <TabList>
+
+            <Tabs className='mt-10 mb-10' defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
+                <TabList className="flex flex-row py-2 mb-8 justify-evenly bg-purple-100 underline underline-offset-4">
                     <Tab>Salsa</Tab>
                     <Tab>Ballet</Tab>
                     <Tab>Classic</Tab>

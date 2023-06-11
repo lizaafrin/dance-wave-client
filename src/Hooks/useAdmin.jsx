@@ -18,11 +18,13 @@ const useAdmin = () => {
     //     return res.data.admin;
     // }
     queryFn: async ()=>{
-        const res = await fetch(`http://localhost:5000/users/admin/${user.email}`,{
-           headers:{
-            authorization: `bearer ${token}`
-           } 
-        })
+        const res = await fetch(`http://localhost:5000/users/admin/${user.email}`,
+      //   {
+      //      headers:{
+      //       authorization: `bearer ${token}`
+      //      } 
+      //   }
+        )
         return res.json();
     }
    })

@@ -8,7 +8,7 @@ import logo from '/logo.png';
 const Footer = () => {
     return (
         <footer>
-            <div className="hero" style={{ backgroundImage: `url(${footer})` }}>
+            <div className="hero bg-gradient-to-r from-slate-400 via-slate-950 to-slate-400" style={{ backgroundImage: `url(${footer})` }}>
                     <div className="hero-overlay bg-opacity-80 pb-20">
                         <div className="flex items-end gap-2 justify-center pt-4">
                             <img className='w-10 h-10 bg-orange-200 rounded-e-full rounded-r-3xl rounded-l-xl' src={logo} alt="" srcset="" />
@@ -30,7 +30,7 @@ const Footer = () => {
 
             </div>
             <div className='bg-black text-white'>
-                <p className='py-6 text-center italic text-orange-400'>Copyright © 2023 - All right reserved by DanceWave Club</p>
+                <p className='py-2 text-center italic text-orange-400'>Copyright © 2023 - All right reserved by DanceWave Club</p>
             </div>
         </footer>
     );

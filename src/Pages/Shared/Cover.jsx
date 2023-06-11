@@ -9,7 +9,7 @@ const Cover = ({ img, title }) => {
         strength={-200}
         >
             {/* <div className="hero min-h-screen" style={{ backgroundImage: ` url("${img}")` }}> */}
-            <div className="hero h-[650px]">
+            <div className="hero h-[350px]">
                 <div className="hero-overlay bg-opacity-60"></div>
                 <div className="hero-content text-center text-neutral-content">
                     <div className="max-w-md">

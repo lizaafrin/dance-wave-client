@@ -3,7 +3,7 @@ import Header from '../Pages/Shared/Header';
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import Footer from '../Pages/Shared/Footer';
 import SelectedClass from '../Pages/Dashboard/SelectedClass';
-import { FaBars, FaEnvelope, FaEnvelopeOpenText, FaFileExcel, FaHome, FaShoppingBag, FaWallet } from 'react-icons/fa';
+import { FaBars, FaEnvelope, FaEnvelopeOpenText, FaFileExcel, FaHome, FaShoppingBag, FaSignOutAlt, FaWallet } from 'react-icons/fa';
 import { AuthContext } from '../provider/AuthProvider';
 
 const DashboardLayout = () => {
@@ -37,6 +37,9 @@ const DashboardLayout = () => {
                     </li>
                     <li>
                         <NavLink to='/classes'> <FaBars></FaBars> All Classes </NavLink>
+                    </li>
+                    <li>
+                        <NavLink to='/signup'> <FaSignOutAlt></FaSignOutAlt> Logout </NavLink>
                     </li>
                     <span className="divider"></span>
                     {

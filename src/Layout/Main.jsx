@@ -9,7 +9,7 @@ const Main = () => {
   const location = useLocation();
   const noFooter = location.pathname.includes('login') || location.pathname.includes('signup');
   return (
-    <div>
+    <div className="bg-lime-100">
       <Header></Header>
       <Outlet></Outlet>
       {noFooter || <Footer></Footer>}
