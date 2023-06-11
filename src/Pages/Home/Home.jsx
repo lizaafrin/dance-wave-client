@@ -10,7 +10,7 @@ import Renowned from './Renowned';
 
 const Home = () => {
     return (
-        <div>
+        <div className='bg-lime-100'>
             <Helmet>
                 <title>DanceWave | Home</title>
             </Helmet>
