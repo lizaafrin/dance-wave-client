@@ -67,17 +67,17 @@ const AuthProvider = ({ children }) => {
             // console.log("Logged in user inside auth state Observer", loggedUser);
             setUser(loggedUser);
 
-            if(loggedUser){
-                axios.post('http://localhost:5000/jwt',{email: loggedUser.email})
-                .then(data => {
-                    // console.log(data.data);
-                    localStorage.setItem('access-token', data.data.token);
-                    // setLoading(false);
-                })
-            }
-            else{
-                localStorage.removeItem('access-token');
-            }
+            // if(loggedUser){
+            //     axios.post('http://localhost:5000/jwt',{email: loggedUser.email})
+            //     .then(data => {
+            //         // console.log(data.data);
+            //         localStorage.setItem('access-token', data.data.token);
+            //         // setLoading(false);
+            //     })
+            // }
+            // else{
+            //     localStorage.removeItem('access-token');
+            // }
             setLoading(false);
         });
         return () => {

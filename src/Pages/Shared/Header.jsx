@@ -20,16 +20,16 @@ const Header = () => {
         {user && <li><Link to='/dashboard/selectedclasses'>Dashboard</Link></li>}
 
     </>
-    if (loading) {
-        return (
-            <div className='flex justify-center'>
-                <InfinitySpin
-                    width='200'
-                    color="#4fa94d"
-                />
-            </div>
-        )
-    }
+    // if (loading) {
+    //     return (
+    //         <div className='flex justify-center'>
+    //             <InfinitySpin
+    //                 width='200'
+    //                 color="#4fa94d"
+    //             />
+    //         </div>
+    //     )
+    // }
     
     return (
         <>

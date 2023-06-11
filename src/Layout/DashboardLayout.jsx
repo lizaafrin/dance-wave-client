@@ -42,7 +42,7 @@ const DashboardLayout = () => {
                     {
                         currentUser.role == 'admin' ?
                             <>
-                                <li><NavLink to='/dashboard/selectedclasses'>Admin Home</NavLink></li>
+                                <li><NavLink to='/dashboard'>Admin Home</NavLink></li>
                                 <li><NavLink to='/enroll/ballet'><FaFileExcel></FaFileExcel> Add Class</NavLink></li>
                                 <li><NavLink to='/enroll/ballet'><FaWallet></FaWallet>Manage Users</NavLink></li>
                                 <li><NavLink to='/dashboard/allusers'><FaEnvelopeOpenText></FaEnvelopeOpenText>All Students</NavLink></li>

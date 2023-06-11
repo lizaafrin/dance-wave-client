@@ -12,8 +12,14 @@ import slide3 from '../../assets/tapDance.jpg';
 import slide4 from '../../assets/hip-hop.jpg';
 import slide5 from '../../assets/samba2.jpg';
 import SectionTitle from '../../components/Sectiontitle/SectionTitle';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 
 const Category = () => {
+    useEffect(() => {
+        Aos.init({ duration: 1000 });
+    }, [])
     return (
         <>
             <SectionTitle subHeading={"From 11.00am to 10pm"}
@@ -30,23 +36,23 @@ const Category = () => {
                 modules={[FreeMode, Pagination]}
                 className="mySwiper mb-24 mt-14"
             >
-                <SwiperSlide>
+                <SwiperSlide data-aos="zoom-in">
                     <img src={slide1} alt="" />
                     <h3 className="text-3xl text-white text-center uppercase -mt-12">Ballet</h3>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide data-aos="zoom-in">
                     <img src={slide2} alt="" />
                     <h3 className="text-3xl text-white text-center uppercase -mt-12">Classic</h3>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide data-aos="zoom-in">
                     <img src={slide3} alt="" />
                     <h3 className="text-3xl text-white text-center uppercase -mt-12">Tap dance</h3>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide data-aos="zoom-in">
                     <img src={slide4} alt="" />
                     <h3 className="text-3xl text-white text-center uppercase -mt-12">Hip-Hop</h3>
                 </SwiperSlide>
-                <SwiperSlide>
+                <SwiperSlide data-aos="zoom-in">
                     <img src={slide5} alt="" />
                     <h3 className="text-3xl text-white text-center uppercase -mt-12">Samba</h3>
                 </SwiperSlide>

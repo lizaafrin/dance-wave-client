@@ -8,8 +8,8 @@ const SectionTitle = ({ heading, subHeading }) => {
                 <hr className='mb-1 border-yellow-600' />
                 <hr className='mb-1 border-yellow-600' />
              
-                <div className='bg-slate-300 mt-8'>
-                    <h3 className="uppercase text-2xl border-x-4 py-4 m-2 rounded-xl">{heading}</h3>
+                <div className='bg-red-300 mt-8'>
+                    <h3 className="uppercase text-lg border-x-4 py-4 m-2 rounded-xl font-semibold">{heading}</h3>
                 </div>
             </div>
         </>

@@ -6,6 +6,7 @@ import FeaturedClass from '../Home/FeaturedClass/FeaturedClass';
 import PopularInstructor from '../Home/PopularInstructor';
 import { Helmet } from 'react-helmet-async';
 import Feedback from '../Home/Feedback';
+import Renowned from './Renowned';
 
 const Home = () => {
     return (
@@ -18,7 +19,8 @@ const Home = () => {
             <PopularClass></PopularClass>
             <FeaturedClass></FeaturedClass>
             <PopularInstructor></PopularInstructor>
-            <Feedback></Feedback>
+           <Renowned></Renowned>
+            {/* <Feedback></Feedback> */}
             
         </div>
     );
