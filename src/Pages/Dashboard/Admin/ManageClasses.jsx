@@ -5,7 +5,7 @@ import danceimg from '../../../assets/salsa2.jpg';
 const ManageClasses = () => {
     const [pendingClasses, setPendingClasses] = useState([]);
     const [disabled, setDisbled] = useState(false);
-    
+
     useEffect(() => {
         fetch('http://localhost:5000/dashboard/pendingclasses')
             .then(res => res.json())
@@ -19,38 +19,38 @@ const ManageClasses = () => {
         fetch(`http://localhost:5000/dashboard/approvedclasses/${manageClass._id}`, {
             method: 'PATCH'
         })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data)
-            if(data.modifiedCount){
-                Swal.fire({
-                    position: 'top-end',
-                    icon: 'success',
-                    title: 'This class is now approved',
-                    showConfirmButton: false,
-                    timer: 1500
-                  })
-            }
-        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.modifiedCount) {
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: 'This class is now approved',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                }
+            })
     }
     const handleDeny = (manageClass) => {
         setDisbled(true)
         fetch(`http://localhost:5000/dashboard/approvedclasses/${manageClass._id}`, {
             method: 'PATCH'
         })
-        .then(res => res.json())
-        .then(data => {
-            console.log(data)
-            if(data.modifiedCount){
-                Swal.fire({
-                    position: 'top-end',
-                    icon: 'success',
-                    title: 'This class is Denied',
-                    showConfirmButton: false,
-                    timer: 1500
-                  })
-            }
-        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data)
+                if (data.modifiedCount) {
+                    Swal.fire({
+                        position: 'top-end',
+                        icon: 'success',
+                        title: 'This class is Denied',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                }
+            })
     }
 
     return (
@@ -67,6 +67,7 @@ const ManageClasses = () => {
                         <th>Fee</th>
                         <th>Status</th>
                         <th className='text-center'>Action</th>
+                        <th>Feedback</th>
                     </tr>
                 </thead>
                 <tbody className=''>
@@ -88,15 +89,27 @@ const ManageClasses = () => {
                                     <button onClick={() => handleDeny(pendingClass)} className="text-sm bg-orange-400 py-2 px-4 rounded-lg" >Deny</button>
                                 </div> :
                                 <div className='flex gap-2'>
-                                <button className="text-sm bg-orange-200 py-2 px-4 rounded-lg" disabled>Approve</button>
-                                <button className="text-sm bg-orange-200 py-2 px-4 rounded-lg" disabled>Deny</button>
-                            </div>
+                                    <button className="text-sm bg-orange-200 py-2 px-4 rounded-lg" disabled>Approve</button>
+                                    <button className="text-sm bg-orange-200 py-2 px-4 rounded-lg" disabled>Deny</button>
+                                </div>
                             }</td>
-
+                            <td><button onClick={() => window.my_modal_5.showModal()} className="text-sm bg-orange-400 py-2 px-4 rounded-lg">Feedback</button></td>
                         </tr>)
                     }
                 </tbody>
             </table>
+            <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+                <form method="dialog" className="modal-box">
+                    <button htmlFor="my-modal-3" className="btn btn-sm btn-circle btn-ghost absolute right-2 top-4">✕</button>
+                    <div className='flex flex-col'>
+                        <h2 className='mb-2 mt-0'>Give Feedback About This Class!</h2>
+                        <textarea className="textarea textarea-warning mt-2" placeholder="Feedback"></textarea>
+                    </div>
+                    <div className="modal-action">
+                        <button className="btn btn-outline btn-sm border-t-4 border-b-4 bg-orange-400 lg:w-2/4 my-2 py-2 h-fit">Send Feedback</button>
+                    </div>
+                </form>
+            </dialog>
         </div>
     );
 };

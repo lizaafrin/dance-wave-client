@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
 import { AuthContext } from '../../../provider/AuthProvider';
-import { motion } from 'framer-motion'
+// import { motion } from 'framer-motion'
 
 const PendingClass = () => {
     const [pendingClasses, setPendingClasses] = useState([]);
@@ -22,9 +22,9 @@ const PendingClass = () => {
             })
     }, []);
     console.log(pendingClasses);
-    const handleFeedback = () => {
-        console.log(hello);
-    }
+    // const handleFeedback = () => {
+    //     console.log(hello);
+    // }
 
     return (
         <div>
@@ -53,14 +53,23 @@ const PendingClass = () => {
                             <td className='ps-10'>{pendingClass.enrolledCount}</td>
                             <td>$ {pendingClass.fee}</td>
                             <td className='capitalize'>{pendingClass.status}</td>
-                            <motion.div>
-                                <td><button onClick= {handleFeedback}className="text-sm bg-orange-400 py-2 px-4 rounded-lg">Feedback</button></td>
-                            </motion.div>
+                            <td><button onClick={() => window.my_modal_5.showModal()} className="text-sm bg-orange-400 py-2 px-4 rounded-lg">Feedback</button></td>
                         </tr>)
                     }
-
                 </tbody>
             </table>
+            <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+                <form method="dialog" className="modal-box">
+                    <button htmlFor="my-modal-3" className="btn btn-sm btn-circle btn-ghost absolute right-2 top-4">✕</button>
+                    <div className='flex flex-col'>
+                        <h2 className='mb-2 mt-0'>Give Us Your Valuable Feedback!</h2>
+                        <textarea className="textarea textarea-warning mt-2" placeholder="Feedback"></textarea>
+                    </div>
+                    <div className="modal-action">
+                        <button className="btn btn-outline btn-sm border-t-4 border-b-4 bg-orange-400 lg:w-2/4 my-2 py-2 h-fit">Send Feedback</button>
+                    </div>
+                </form>
+            </dialog>
         </div>
     );
 };

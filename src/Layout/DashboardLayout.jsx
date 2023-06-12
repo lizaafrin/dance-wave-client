@@ -4,9 +4,14 @@ import { FaBars, FaEnvelope, FaEnvelopeOpenText, FaFileExcel, FaHome, FaRegAddre
 import { AuthContext } from '../provider/AuthProvider';
 
 const DashboardLayout = () => {
-    const { user, userData } = useContext(AuthContext);
+    const { user, userData, logOut } = useContext(AuthContext);
     const currentUser = userData.find(k => user?.email === k.email);
-    const location = useLocation()
+    const location = useLocation();
+    const handleSignOut = () => {
+        logOut()
+            .then((result) => { })
+            .catch((error) => console.log(error));
+    };
 
     return (
 
@@ -33,7 +38,7 @@ const DashboardLayout = () => {
                         <NavLink to='/enroll/Salsa'> <FaBars></FaBars> All Classes </NavLink>
                     </li>
                     <li>
-                        <NavLink to='/signup'> <FaSignOutAlt></FaSignOutAlt> Logout </NavLink>
+                        <NavLink to='/'> <FaSignOutAlt></FaSignOutAlt> <button onClick={handleSignOut} className='w-fit'>Logout</button> </NavLink>
                     </li>
                     <span className="divider"></span>
                     {
