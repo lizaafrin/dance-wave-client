@@ -2,7 +2,7 @@ import React from 'react';
 import { FaAmazonPay, FaTrashAlt } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import { Helmet } from 'react-helmet-async';
-import useSelectedClass from '../../Hooks/useSelectedClass';
+import useSelectedClass from '../../../Hooks/useSelectedClass';
 
 const SelectedClass = () => {
 

@@ -1,4 +1,4 @@
-.featured-item{
+.featured-item {
     background-image: url('../../../assets/banner.jpg');
-    border-radius: 0 40;
+    background-position: 0 bottom;
 }

@@ -1,9 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
-import Header from '../Pages/Shared/Header';
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
-import Footer from '../Pages/Shared/Footer';
-import SelectedClass from '../Pages/Dashboard/SelectedClass';
-import { FaBars, FaEnvelope, FaEnvelopeOpenText, FaFileExcel, FaHome, FaShoppingBag, FaSignOutAlt, FaWallet } from 'react-icons/fa';
+import { FaBars, FaEnvelope, FaEnvelopeOpenText, FaFileExcel, FaHome, FaRegAddressBook, FaShoppingBag, FaSignOutAlt, FaWallet } from 'react-icons/fa';
 import { AuthContext } from '../provider/AuthProvider';
 
 const DashboardLayout = () => {
@@ -33,7 +30,7 @@ const DashboardLayout = () => {
                         <NavLink to='/'><FaHome></FaHome>Home </NavLink>
                     </li>
                     <li>
-                        <NavLink to='/classes'> <FaBars></FaBars> All Classes </NavLink>
+                        <NavLink to='/enroll/Salsa'> <FaBars></FaBars> All Classes </NavLink>
                     </li>
                     <li>
                         <NavLink to='/signup'> <FaSignOutAlt></FaSignOutAlt> Logout </NavLink>
@@ -42,16 +39,14 @@ const DashboardLayout = () => {
                     {
                         currentUser.role == 'admin' ?
                             <>
-                                <li><NavLink to='/dashboard/allusers'>Admin Home</NavLink></li>
-                                <li><NavLink to='/enroll/ballet'><FaFileExcel></FaFileExcel> Add Class</NavLink></li>
-                                <li><NavLink to='/enroll/ballet'><FaWallet></FaWallet>Manage Users</NavLink></li>
-                                <li><NavLink to='/dashboard/allusers'><FaEnvelopeOpenText></FaEnvelopeOpenText>All Users</NavLink></li>
+                                <li><NavLink to='/'>Admin Home</NavLink></li>
+                                <li><NavLink to='/dashboard/addedclasses'><FaFileExcel></FaFileExcel>Manage Classes</NavLink></li>
+                                <li><NavLink to='/dashboard/allusers'><FaEnvelopeOpenText></FaEnvelopeOpenText>Manage Users</NavLink></li>
                             </> :
                             currentUser.role == 'instructor' ?
                                 <>
-                                    <li><NavLink to='/dashboard/addclass'>Add a class</NavLink></li>
-                                    <li><NavLink to='/dashboard/approved'><FaFileExcel></FaFileExcel> My Approved Classes</NavLink></li>
-                                    <li><NavLink to='/dashboard/pendingclasses'><FaWallet></FaWallet>My Pending Classes</NavLink></li>
+                                    <li><NavLink to='/dashboard/addclass'><FaRegAddressBook></FaRegAddressBook> Add a class</NavLink></li>
+                                    <li><NavLink to='/dashboard/pendingclasses'><FaWallet></FaWallet>My Added Classes</NavLink></li>
                                 </> :
                                     <>
                                         <li><NavLink to='/dashboard/selectedclasses'>Selected Classes</NavLink></li>

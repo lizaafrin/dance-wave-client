@@ -1,7 +1,7 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import { useContext } from 'react';
-import { AuthContext } from '../../provider/AuthProvider';
+import { AuthContext } from '../../../provider/AuthProvider';
 import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { FaAmazonPay, FaAngular, FaAward, FaIdBadge, FaInfo, FaTrashAlt, FaUserAltSlash, FaUserGraduate, FaUserShield, FaUserSlash } from 'react-icons/fa';
