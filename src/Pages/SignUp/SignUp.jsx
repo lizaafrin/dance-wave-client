@@ -64,7 +64,7 @@ const SignUp = () => {
                             })
                         reset();
                     })
-                    .catch(error => console.log(error))
+                    .catch(error => setError(error))
             })
         }
     }

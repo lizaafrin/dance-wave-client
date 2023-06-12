@@ -51,7 +51,7 @@ const DashboardLayout = () => {
                                 <>
                                     <li><NavLink to='/dashboard/addclass'>Add a class</NavLink></li>
                                     <li><NavLink to='/dashboard/approved'><FaFileExcel></FaFileExcel> My Approved Classes</NavLink></li>
-                                    <li><NavLink to='/dashboard/pending'><FaWallet></FaWallet>My Pending Classes</NavLink></li>
+                                    <li><NavLink to='/dashboard/pendingclasses'><FaWallet></FaWallet>My Pending Classes</NavLink></li>
                                 </> :
                                     <>
                                         <li><NavLink to='/dashboard/selectedclasses'>Selected Classes</NavLink></li>

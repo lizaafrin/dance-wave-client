@@ -19,8 +19,9 @@ const AddClass = () => {
         const fee = parseFloat(e.target[5].value);
         const availableSeats = parseInt(e.target[6].value);
         const details = e.target[7].value;
-        const enrolledCount = [];
-        const newClass = {name, category, instructorName, availableSeats, image, fee, details, status: 'pending', instructorEmail: currentUser.email, enrolledCount}
+        const students = [];
+        const enrolledCount = students.length;
+        const newClass = {name, category, instructorName, availableSeats, image, fee, details, status: 'pending', instructorEmail: currentUser.email, enrolledCount, students}
         console.log(newClass);
         fetch('http://localhost:5000/pendingclasses', {
                 method: 'POST',

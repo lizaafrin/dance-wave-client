@@ -17,6 +17,7 @@ import AdminRoute from "./AdminRoute";
 import StudentRoute from "./StudentRoute";
 import InstructorRoute from "./InstructorRoute";
 import AddClass from "../Pages/Dashboard/Instructor/AddClass";
+import PendingClass from "../Pages/Dashboard/Instructor/PendingClass";
 
 
 export const router = createBrowserRouter([
@@ -71,8 +72,8 @@ export const router = createBrowserRouter([
                 element: <InstructorRoute><AddClass></AddClass></InstructorRoute>
             },
             {
-                path: '/dashboard/addclass',
-                element: <InstructorRoute><AddClass></AddClass></InstructorRoute>
+                path: '/dashboard/pendingclasses',
+                element: <InstructorRoute><PendingClass></PendingClass></InstructorRoute>
             },
         ]
 
