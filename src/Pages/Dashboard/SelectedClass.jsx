@@ -3,7 +3,6 @@ import { FaAmazonPay, FaTrashAlt } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import { Helmet } from 'react-helmet-async';
 import useSelectedClass from '../../Hooks/useSelectedClass';
-import { Link } from 'react-router-dom';
 
 const SelectedClass = () => {
 
@@ -88,7 +87,7 @@ const SelectedClass = () => {
                 </table>
             </div>
         </>
-    );
+    )
 };
 
 export default SelectedClass;

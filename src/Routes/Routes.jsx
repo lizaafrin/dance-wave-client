@@ -13,6 +13,10 @@ import DashboardLayout from "../Layout/DashboardLayout";
 import SelectedClass from "../Pages/Dashboard/SelectedClass";
 import AllUsers from "../Pages/Dashboard/AllUsers";
 import ErrorPage from "../Pages/Errorpage/ErrorPage";
+import AdminRoute from "./AdminRoute";
+import StudentRoute from "./StudentRoute";
+import InstructorRoute from "./InstructorRoute";
+import AddClass from "../Pages/Dashboard/Instructor/AddClass";
 
 
 export const router = createBrowserRouter([
@@ -46,19 +50,29 @@ export const router = createBrowserRouter([
         ],
     },
     {
-
         path: '/dashboard',
         element: <PrivateRoute>
             <DashboardLayout></DashboardLayout>
         </PrivateRoute>,
         children:[
+           
             {
                 path: '/dashboard/selectedclasses',
-                element: <SelectedClass></SelectedClass>
+                element: <StudentRoute><SelectedClass></SelectedClass></StudentRoute>
             },
+            // admin routes
             {
                 path: '/dashboard/allusers',
-                element: <AllUsers></AllUsers>
+                element: <AdminRoute><AllUsers></AllUsers></AdminRoute>
+            },
+            // instructor routes
+            {
+                path: '/dashboard/addclass',
+                element: <InstructorRoute><AddClass></AddClass></InstructorRoute>
+            },
+            {
+                path: '/dashboard/addclass',
+                element: <InstructorRoute><AddClass></AddClass></InstructorRoute>
             },
         ]
 

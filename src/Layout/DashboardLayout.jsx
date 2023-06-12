@@ -8,19 +8,16 @@ import { AuthContext } from '../provider/AuthProvider';
 
 const DashboardLayout = () => {
     const { user, userData } = useContext(AuthContext);
-    console.log(user, userData);
     const currentUser = userData.find(k => user?.email === k.email);
-    
-    
-    // const isAdmin = false;
-    // const isAdmin = true;
+    const location = useLocation()
+
     return (
 
         <div className="drawer lg:drawer-open">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
             <div className="drawer-content flex flex-col justify-center w-full">
                 {/* Page content here */}
-                <label htmlFor="my-drawer-2" className="btn  btn-outline btn-sm border-t-4 border-b-4 bg-orange-100 drawer-button mt-20 mb-10 lg:hidden w-fit mx-auto">Open drawer</label>
+                <label htmlFor="my-drawer-2" className="btn  btn-outline btn-sm border-t-4 border-b-4 bg-orange-100 drawer-button mt-20 mb-10 lg:hidden w-fit mx-auto">Open drawer</label>                                                                                           
                 {/* <SelectedClass></SelectedClass> */}
                 <Outlet></Outlet>
 
@@ -45,21 +42,21 @@ const DashboardLayout = () => {
                     {
                         currentUser.role == 'admin' ?
                             <>
-                                <li><NavLink to='/dashboard'>Admin Home</NavLink></li>
+                                <li><NavLink to='/dashboard/allusers'>Admin Home</NavLink></li>
                                 <li><NavLink to='/enroll/ballet'><FaFileExcel></FaFileExcel> Add Class</NavLink></li>
                                 <li><NavLink to='/enroll/ballet'><FaWallet></FaWallet>Manage Users</NavLink></li>
-                                <li><NavLink to='/dashboard/allusers'><FaEnvelopeOpenText></FaEnvelopeOpenText>All Students</NavLink></li>
+                                <li><NavLink to='/dashboard/allusers'><FaEnvelopeOpenText></FaEnvelopeOpenText>All Users</NavLink></li>
                             </> :
                             currentUser.role == 'instructor' ?
                                 <>
-                                    <li><NavLink to='/dashboard/selectedclasses'>Add a class</NavLink></li>
-                                    <li><NavLink to='/enroll/ballet'><FaFileExcel></FaFileExcel> My Approved Classes</NavLink></li>
-                                    <li><NavLink to='/enroll/ballet'><FaWallet></FaWallet>My Pending Classes</NavLink></li>
+                                    <li><NavLink to='/dashboard/addclass'>Add a class</NavLink></li>
+                                    <li><NavLink to='/dashboard/approved'><FaFileExcel></FaFileExcel> My Approved Classes</NavLink></li>
+                                    <li><NavLink to='/dashboard/pending'><FaWallet></FaWallet>My Pending Classes</NavLink></li>
                                 </> :
                                     <>
                                         <li><NavLink to='/dashboard/selectedclasses'>Selected Classes</NavLink></li>
                                         <li><NavLink to='/enroll/ballet'><FaFileExcel></FaFileExcel> My Enrolled classess</NavLink></li>
-                                        <li><NavLink to='/enroll/ballet'><FaWallet></FaWallet>Payment History</NavLink></li>
+                                        <li><NavLink to='/dashboard/addclass'><FaWallet></FaWallet>Payment History</NavLink></li>
                                         <li><NavLink to='/enroll/ballet'><FaEnvelopeOpenText></FaEnvelopeOpenText>Feedback</NavLink></li>
                                     </>
                     }

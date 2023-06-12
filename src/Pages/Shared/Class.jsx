@@ -7,50 +7,52 @@ import Swal from 'sweetalert2';
 import useSelectedClass from '../../Hooks/useSelectedClass';
 
 const Class = ({ item }) => {
-    const { name, details, image, fee,instructorName,availableSeats, _id
+    const { name, details, image, fee, instructorName, availableSeats, _id
     } = item;
-    const {user} = useContext(AuthContext);
+    const { user, userData } = useContext(AuthContext);
+    const currentUser = userData.find(k => user?.email === k.email);
     const navigate = useNavigate();
     const location = useLocation();
     const [selectedClass, refetch] = useSelectedClass();
 
-    const handleSelect = item =>{
+    const handleSelect = item => {
         console.log(item);
-        if(user && user.email){
-            const selectedClass = { name, instructorName, fee, email: user.email
+        if (user && user.email) {
+            const selectedClass = {
+                name, instructorName, fee, email: user.email
             }
-            fetch('http://localhost:5000/selectedclass',{
+            fetch('http://localhost:5000/selectedclass', {
                 method: 'POST',
                 headers: {
                     'content-Type': 'application/json'
                 },
                 body: JSON.stringify(selectedClass)
             })
-            .then(res=> res.json())
-            .then(data => {
-                console.log(data);
-                // refetch();
-                if(data.insertedId){
-                    Swal.fire({
-                        position: 'top-end',
-                        icon: 'success',
-                        title: 'Selected class added',
-                        showConfirmButton: false,
-                        timer: 1500
-                    })
-                }
-                else if(data.message) {
-                    Swal.fire({
-                        position: 'top-end',
-                        icon: 'warning',
-                        title: 'This class already selected',
-                        showConfirmButton: false,
-                        timer: 1500
-                    })
-                }
-            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    // refetch();
+                    if (data.insertedId) {
+                        Swal.fire({
+                            position: 'top-end',
+                            icon: 'success',
+                            title: 'Selected class added',
+                            showConfirmButton: false,
+                            timer: 1500
+                        })
+                    }
+                    else if (data.message) {
+                        Swal.fire({
+                            position: 'top-end',
+                            icon: 'warning',
+                            title: 'This class already selected',
+                            showConfirmButton: false,
+                            timer: 1500
+                        })
+                    }
+                })
         }
-        else{
+        else {
             Swal.fire({
                 title: 'Please login to select the Class',
                 text: "You won't be able to revert this!",
@@ -71,10 +73,17 @@ const Class = ({ item }) => {
             <figure className='w-1/2'><img className='rounded-s-full rounded-t-3xl h-[95%]' src={image} alt="Movie" /></figure>
             <div className="card-body w-1/2">
                 <h2 className="card-title">{name}</h2>
+                <p  className='font-semibold'>Instructor: {instructorName}</p>
                 <p>{details}</p>
                 <p className='font-semibold'>Course Fee: {fee}$</p>
+                <p className='font-semibold'>Available Seats: {availableSeats}</p>
+
                 <div className="card-actions justify-start">
-                    <button onClick={()=>  handleSelect(item)} className="btn btn-outline btn-sm border-t-4 border-b-4 bg-orange-100">SElect</button>
+                    {currentUser?.role === 'student' ?
+                        <button onClick={() => handleSelect(item)} className="btn btn-outline btn-sm border-t-4 border-b-4 bg-orange-200">Select</button>
+                        :
+                        <button className="btn btn-outline btn-sm border-t-4 border-b-4 bg-orange-100" disabled>SElect</button>
+                    }
                 </div>
             </div>
         </div>
