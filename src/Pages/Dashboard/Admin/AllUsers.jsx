@@ -1,12 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
-import { useContext } from 'react';
-import { AuthContext } from '../../../provider/AuthProvider';
-import { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
-import { FaAmazonPay, FaAngular, FaAward, FaIdBadge, FaInfo, FaTrashAlt, FaUserAltSlash, FaUserGraduate, FaUserShield, FaUserSlash } from 'react-icons/fa';
+import {  FaAward, FaIdBadge } from 'react-icons/fa';
 import Swal from 'sweetalert2';
-import { useState } from 'react';
+
 
 const AllUsers = () => {
     // const [disabled, setDisabled] = useState(false);
@@ -56,15 +53,14 @@ const AllUsers = () => {
                 }
             })
     };
-
-
+    
     return (
         <div>
             <Helmet>
                 <title>Dancewave | All Users</title>
             </Helmet>
             <h2 className='text-2xl text-center mb-4 font-semibold'>Total users:{users.length}</h2>
-            <table className="table w-full lg:ms-10 bg-orange-100">
+            <table className="table w-full  bg-orange-100">
                 {/* head */}
                 <thead className='bg-orange-300 '>
                     <tr>

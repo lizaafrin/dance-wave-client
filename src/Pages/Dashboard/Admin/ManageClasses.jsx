@@ -1,28 +1,39 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import danceimg from '../../../assets/salsa2.jpg';
+import Swal from 'sweetalert2';
+import { AuthContext } from '../../../provider/AuthProvider';
+import { useQuery } from '@tanstack/react-query';
 
 
 const ManageClasses = () => {
-    const [pendingClasses, setPendingClasses] = useState([]);
+    const { loading, setLoading } = useContext(AuthContext);
+    // const [pendingClasses, setPendingClasses] = useState([]);
     const [disabled, setDisbled] = useState(false);
 
-    useEffect(() => {
-        fetch('http://localhost:5000/dashboard/pendingclasses')
-            .then(res => res.json())
-            .then(data => {
-                setPendingClasses(data);
-            })
-    }, []);
+    const { data: pendingClasses = [], refetch } = useQuery(['pendingClasses'], async () => {
+        const response = await fetch('http://localhost:5000/dashboard/pendingclasses',)
+        return response.json();
+
+    })
+    // useEffect(() => {
+    //     fetch('http://localhost:5000/dashboard/pendingclasses')
+    //         .then(res => res.json())
+    //         .then(data => {
+    //             setPendingClasses(data);
+    //         })
+    // }, []);
 
     const handleApprove = (manageClass) => {
         setDisbled(true);
+        setLoading(false);
         fetch(`http://localhost:5000/dashboard/approvedclasses/${manageClass._id}`, {
             method: 'PATCH'
         })
             .then(res => res.json())
             .then(data => {
                 console.log(data)
-                if (data.modifiedCount) {
+                if (data.modifiedCount > 0) {
+                    refetch();
                     Swal.fire({
                         position: 'top-end',
                         icon: 'success',
@@ -32,16 +43,38 @@ const ManageClasses = () => {
                     })
                 }
             })
+
+        fetch('http://localhost:5000/danceclasses', {
+            method: 'PUT',
+            headers: {
+                'content-Type': 'application/json'
+            },
+            body: JSON.stringify(manageClass)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                // if (data.insertedId) {
+                //     Swal.fire({
+                //         position: 'top-end',
+                //         icon: 'success',
+                //         title: 'Class Submitted Successfully',
+                //         showConfirmButton: false,
+                //         timer: 1500
+                //     })
+                // }
+            })
     }
     const handleDeny = (manageClass) => {
         setDisbled(true)
-        fetch(`http://localhost:5000/dashboard/approvedclasses/${manageClass._id}`, {
+        fetch(`http://localhost:5000/dashboard/deniedclasses/${manageClass._id}`, {
             method: 'PATCH'
         })
             .then(res => res.json())
             .then(data => {
                 console.log(data)
                 if (data.modifiedCount) {
+                    refetch();
                     Swal.fire({
                         position: 'top-end',
                         icon: 'success',
@@ -55,7 +88,7 @@ const ManageClasses = () => {
 
     return (
         <div>
-            <table className="table w-full lg:ms-10 bg-orange-100">
+            <table className="table w-full bg-orange-100">
                 {/* head */}
                 <thead className='bg-orange-300 '>
                     <tr>

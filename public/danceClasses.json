@@ -3,160 +3,225 @@
         "_id": "1",
         "name": "Beginner Ballet",
         "category": "Ballet",
-        "instructor-name": "Julia Anderson",
+        "instructorName": "Julia Anderson",
         "availableSeats": 15,
         "fee": 50,
         "details": "This class is designed for beginners who want to learn the fundamentals of ballet. No prior experience required.",
-        "image": "https://img.freepik.com/free-photo/little-ballerina-posing-ballet-barre-with-personal-teacher-dance-studio_155003-12532.jpg?w=740&t=st=1686158869~exp=1686159469~hmac=fe5bd086921971a10b3dc9025318cbf4658dd2984b407b156a22994722c51bd9"
+        "image": "https://img.freepik.com/free-photo/little-ballerina-posing-ballet-barre-with-personal-teacher-dance-studio_155003-12532.jpg?w=740&t=st=1686158869~exp=1686159469~hmac=fe5bd086921971a10b3dc9025318cbf4658dd2984b407b156a22994722c51bd9",
+        "status": "approved",
+        "instructorEmail": "julia@example.com",
+        "enrolledCount": 10,
+        "students": []
+
     },
     {
         "_id": "2",
         "name": "Intermediate Ballet",
         "category": "Ballet",
-        "instructor-name": "Michael Johnson",
+        "instructorName": "Michael Johnson",
         "availableSeats": 12,
         "fee": 60,
         "details": "Take your ballet skills to the next level with this intermediate class. Previous ballet experience recommended.",
-        "image": "https://img.freepik.com/free-photo/ballet-dancer-hugging-smiling-cute-girl-practicing-dance-studio_23-2147856952.jpg?w=740&t=st=1686158934~exp=1686159534~hmac=edde546f3eb905c0cee19c82dadb9de82c4f13894acdbc9733a1fdee03745476"
+        "image": "https://img.freepik.com/free-photo/ballet-dancer-hugging-smiling-cute-girl-practicing-dance-studio_23-2147856952.jpg?w=740&t=st=1686158934~exp=1686159534~hmac=edde546f3eb905c0cee19c82dadb9de82c4f13894acdbc9733a1fdee03745476",
+        "status": "approved",
+        "instructorEmail": "julia@example.com",
+        "enrolledCount": 10,
+        "students": []
     },
     {
         "_id": "3",
         "name": "Advanced Ballet",
         "category": "Ballet",
-        "instructor-name": "Olivia Smith",
+        "instructorName": "Olivia Smith",
         "availableSeats": 10,
         "fee": 70,
         "details": "For experienced ballet dancers who want to refine their technique and learn more advanced choreography.",
-        "image": "https://img.freepik.com/free-photo/young-beautiful-modern-style-dancer-posing_155003-849.jpg?w=740&t=st=1686159018~exp=1686159618~hmac=68bf19354c563fae991f6f485a41320f1a83153c51516b1dc10417012213eb65"
+        "image": "https://img.freepik.com/free-photo/young-beautiful-modern-style-dancer-posing_155003-849.jpg?w=740&t=st=1686159018~exp=1686159618~hmac=68bf19354c563fae991f6f485a41320f1a83153c51516b1dc10417012213eb65",
+        "status": "approved",
+        "instructorEmail": "julia@example.com",
+        "enrolledCount": 10,
+        "students": []
     },
     {
         "_id": "4",
         "name": "Salsa Basics",
         "category": "Salsa",
-        "instructor-name": "Carlos Rodriguez",
+        "instructorName": "Carlos Rodriguez",
         "availableSeats": 20,
         "fee": 45,
         "details": "Learn the basic steps and movements of salsa in this fun and energetic class. No partner required.",
-        "image": "https://img.freepik.com/free-photo/couple-having-latin-dance-performance-city_23-2149429206.jpg?w=740&t=st=1686159473~exp=1686160073~hmac=d670a0a1c04b323f68672209b01c972cfc98a6b9cfd6f2ee72145125d3dc0c33"
+        "image": "https://img.freepik.com/free-photo/couple-having-latin-dance-performance-city_23-2149429206.jpg?w=740&t=st=1686159473~exp=1686160073~hmac=d670a0a1c04b323f68672209b01c972cfc98a6b9cfd6f2ee72145125d3dc0c33",
+        "status": "approved",
+        "instructorEmail": "julia@example.com",
+        "enrolledCount": 10,
+        "students": []
     },
     {
         "_id": "5",
         "name": "Intermediate Salsa",
         "category": "Salsa",
-        "instructor-name": "Maria Garcia",
+        "instructorName": "Maria Garcia",
         "availableSeats": 18,
         "fee": 55,
         "details": "Build upon your salsa foundation and learn more complex patterns and styling.",
-        "image": "https://img.freepik.com/free-photo/young-couple-dancing-bachata_23-2149587526.jpg?w=740&t=st=1686159536~exp=1686160136~hmac=0e7df49b48a114a026d72c2eec7ad14461316419aae5c77847a9681349e60c6c"
+        "image": "https://img.freepik.com/free-photo/young-couple-dancing-bachata_23-2149587526.jpg?w=740&t=st=1686159536~exp=1686160136~hmac=0e7df49b48a114a026d72c2eec7ad14461316419aae5c77847a9681349e60c6c",
+        "status": "approved",
+        "instructorEmail": "julia@example.com",
+        "enrolledCount": 10,
+        "students": []
     },
     {
         "_id": "6",
         "name": "Salsa Partnerwork",
         "category": "Salsa",
-        "instructor-name": "Juan Martinez",
+        "instructorName": "Juan Martinez",
         "availableSeats": 14,
         "fee": 65,
         "details": "Focus on partnering techniques and improve your lead/follow skills in salsa dancing.",
-        "image": "https://img.freepik.com/free-photo/young-couple-dancing-together_23-2148003989.jpg?w=740&t=st=1686159653~exp=1686160253~hmac=90a96fb199447ddb816fbeabd476b6b440065037ed7c28a16e32799c7193bd99"
+        "image": "https://img.freepik.com/free-photo/young-couple-dancing-together_23-2148003989.jpg?w=740&t=st=1686159653~exp=1686160253~hmac=90a96fb199447ddb816fbeabd476b6b440065037ed7c28a16e32799c7193bd99",
+        "status": "approved",
+        "instructorEmail": "julia@example.com",
+        "enrolledCount": 10,
+        "students": []
     },
     {
         "_id": "7",
         "name": "Classic Dance for Kids",
         "category": "Classic",
-        "instructor-name": "Sophie Thompson",
+        "instructorName": "Sophie Thompson",
         "availableSeats": 15,
         "fee": 40,
         "details": "Introduce your kids to the world of classic dance in this fun and engaging class.",
-        "image": "https://img.freepik.com/free-photo/little-ballerina-girl-tutu-adorable-child-dancing-classical-ballet-white-studio_155003-8711.jpg?w=740&t=st=1686159804~exp=1686160404~hmac=0bd7ae4618a50c3efa309106340cc6576f341942ea0cf3a7127ce6f48c3fbf79"
+        "image": "https://img.freepik.com/free-photo/little-ballerina-girl-tutu-adorable-child-dancing-classical-ballet-white-studio_155003-8711.jpg?w=740&t=st=1686159804~exp=1686160404~hmac=0bd7ae4618a50c3efa309106340cc6576f341942ea0cf3a7127ce6f48c3fbf79",
+        "status": "approved",
+        "instructorEmail": "julia@example.com",
+        "enrolledCount": 10,
+        "students": []
     },
     {
         "_id": "8",
         "name": "Adult Classic Ballet",
         "category": "Classic",
-        "instructor-name": "David Wilson",
+        "instructorName": "David Wilson",
         "availableSeats": 12,
         "fee": 55,
         "details": "A classic ballet class designed specifically for adults. All skill levels welcome.",
-        "image": "https://img.freepik.com/free-photo/front-view-ballerina-wearing-tutu_23-2148496774.jpg?w=740&t=st=1686159861~exp=1686160461~hmac=7536bd996c2755247c32eea7e14d3edfb9c09f86f546c538ff4ebb260109f3c9"
+        "image": "https://img.freepik.com/free-photo/front-view-ballerina-wearing-tutu_23-2148496774.jpg?w=740&t=st=1686159861~exp=1686160461~hmac=7536bd996c2755247c32eea7e14d3edfb9c09f86f546c538ff4ebb260109f3c9",
+        "status": "approved",
+        "instructorEmail": "julia@example.com",
+        "enrolledCount": 10,
+        "students": []
     },
     {
         "_id": "9",
         "name": "Hip-Hop Basics",
         "category": "Hip-Hop",
-        "instructor-name": "Jessica Brown",
+        "instructorName": "Jessica Brown",
         "availableSeats": 20,
         "fee": 50,
         "details": "Learn the basic moves and grooves of hip-hop in this high-energy class.",
-        "image": "https://img.freepik.com/free-photo/front-view-teenager-with-skateboard-outside_23-2148758451.jpg?w=740&t=st=1686159913~exp=1686160513~hmac=ce3d04cb38a83ce1cf04a4791e976054f98ea6eda1e1268161b0d493db344bf4"
+        "image": "https://img.freepik.com/free-photo/front-view-teenager-with-skateboard-outside_23-2148758451.jpg?w=740&t=st=1686159913~exp=1686160513~hmac=ce3d04cb38a83ce1cf04a4791e976054f98ea6eda1e1268161b0d493db344bf4",
+        "status": "approved",
+        "instructorEmail": "julia@example.com",
+        "enrolledCount": 10,
+        "students": []
     },
     {
         "_id": "10",
         "name": "Intermediate Hip-Hop",
         "category": "Hip-Hop",
-        "instructor-name": "Chris Johnson",
+        "instructorName": "Chris Johnson",
         "availableSeats": 18,
         "fee": 60,
         "details": "Take your hip-hop skills to the next level with more complex choreography and freestyle techniques.",
-        "image": "https://img.freepik.com/free-photo/young-woman-breakdancing-dance-studio_23-2148169349.jpg?w=826&t=st=1686159980~exp=1686160580~hmac=82f37c9d55f39df9265642cad191a7c0c1d2eb4331be3b83830f16350668761b"
+        "image": "https://img.freepik.com/free-photo/young-woman-breakdancing-dance-studio_23-2148169349.jpg?w=826&t=st=1686159980~exp=1686160580~hmac=82f37c9d55f39df9265642cad191a7c0c1d2eb4331be3b83830f16350668761b",
+        "status": "approved",
+        "instructorEmail": "julia@example.com",
+        "enrolledCount": 10,
+        "students": []
     },
     {
         "_id": "11",
         "name": "Street Dance Workshop",
         "category": "Hip-Hop",
-        "instructor-name": "Emily Roberts",
+        "instructorName": "Emily Roberts",
         "availableSeats": 15,
         "fee": 70,
         "details": "Explore various street dance styles, including popping, locking, and breaking, in this dynamic workshop.",
-        "image": "https://img.freepik.com/free-photo/people-taking-part-dance-therapy-class_23-2149346544.jpg?w=740&t=st=1686160033~exp=1686160633~hmac=c3761d4d983b69462210f40026e7db3bf8d3a9109f4f44046f71ef158900126a"
+        "image": "https://img.freepik.com/free-photo/people-taking-part-dance-therapy-class_23-2149346544.jpg?w=740&t=st=1686160033~exp=1686160633~hmac=c3761d4d983b69462210f40026e7db3bf8d3a9109f4f44046f71ef158900126a",
+        "status": "approved",
+        "instructorEmail": "julia@example.com",
+        "enrolledCount": 10,
+        "students": []
     },
     {
         "_id": "12",
         "name": "Pointe Technique",
         "category": "Ballet",
-        "instructor-name": "Emily Thompson",
-        "availableSeats": 8,
+        "instructorName": "Emily Thompson",
+        "availableSeats": 20,
         "fee": 80,
         "details": "This class focuses on developing strength and technique for dancing on pointe. Prior ballet experience and approval required.",
-        "image": "https://img.freepik.com/free-photo/little-ballerina-dancing-with-personal-ballet-teacher-dance-studio_155003-569.jpg?w=1380&t=st=1686160091~exp=1686160691~hmac=affd40c59dc4b84cc237e5ecdbecf4a11ebac2f88791cc4d64d6f016cb7846f7"
+        "image": "https://img.freepik.com/free-photo/little-ballerina-dancing-with-personal-ballet-teacher-dance-studio_155003-569.jpg?w=1380&t=st=1686160091~exp=1686160691~hmac=affd40c59dc4b84cc237e5ecdbecf4a11ebac2f88791cc4d64d6f016cb7846f7",
+        "status": "approved",
+        "instructorEmail": "julia@example.com",
+        "enrolledCount": 10,
+        "students": []
     },
     {
         "_id": "13",
         "name": "Salsa Styling",
         "category": "Salsa",
-        "instructor-name": "Ricardo Perez",
+        "instructorName": "Ricardo Perez",
         "availableSeats": 10,
         "fee": 70,
         "details": "Learn how to add flair and individual style to your salsa dancing with this styling-focused class.",
-        "image": "https://img.freepik.com/free-photo/sensual-woman-posing-star_23-2147651843.jpg?w=740&t=st=1686160212~exp=1686160812~hmac=89bf31fbace373c73072ba40ab184238fe4d83ec17ca826a706073e84b8e8b74"
+        "image": "https://img.freepik.com/free-photo/sensual-woman-posing-star_23-2147651843.jpg?w=740&t=st=1686160212~exp=1686160812~hmac=89bf31fbace373c73072ba40ab184238fe4d83ec17ca826a706073e84b8e8b74",
+        "status": "approved",
+        "instructorEmail": "julia@example.com",
+        "enrolledCount": 10,
+        "students": []
     },
     {
         "_id": "14",
         "name": "Contemporary Dance",
         "category": "Classic",
-        "instructor-name": "Sophia Miller",
+        "instructorName": "Sophia Miller",
         "availableSeats": 12,
         "fee": 65,
         "details": "Explore the fusion of ballet and modern dance in this expressive and fluid contemporary dance class.",
-        "image": "https://img.freepik.com/free-photo/silhouette-beautiful-ballerina-dancing-with-veil-dark-blue-background_155003-31548.jpg?w=740&t=st=1686160263~exp=1686160863~hmac=d044dbdd3897a13b3a7a4c88c05bd57050e0a42aebe0371778517ef72125d2c6"
+        "image": "https://img.freepik.com/free-photo/silhouette-beautiful-ballerina-dancing-with-veil-dark-blue-background_155003-31548.jpg?w=740&t=st=1686160263~exp=1686160863~hmac=d044dbdd3897a13b3a7a4c88c05bd57050e0a42aebe0371778517ef72125d2c6",
+        "status": "approved",
+        "instructorEmail": "julia@example.com",
+        "enrolledCount": 10,
+        "students": []
     },
     {
         "_id": "15",
         "name": "Breakdance Fundamentals",
         "category": "Hip-Hop",
-        "instructor-name": "Alex Rodriguez",
+        "instructorName": "Alex Rodriguez",
         "availableSeats": 15,
         "fee": 55,
         "details": "Master the foundational moves of breakdancing, including toprock, footwork, and power moves.",
-        "image": "https://img.freepik.com/free-photo/artistic-non-binary-person-green-jacket-posing_23-2148760559.jpg?w=740&t=st=1686160301~exp=1686160901~hmac=f7d57532f323af9512d09ddfaeaa300e318058222908bb2f32ccb6cb4860c7d5"
+        "image": "https://img.freepik.com/free-photo/artistic-non-binary-person-green-jacket-posing_23-2148760559.jpg?w=740&t=st=1686160301~exp=1686160901~hmac=f7d57532f323af9512d09ddfaeaa300e318058222908bb2f32ccb6cb4860c7d5",
+        "status": "approved",
+        "instructorEmail": "julia@example.com",
+        "enrolledCount": 10,
+        "students": []
     },
     {
         "_id": "16",
         "name": "Jazz Fusion",
         "category": "Classic",
-        "instructor-name": "Emma Davis",
+        "instructorName": "Emma Davis",
         "availableSeats": 10,
         "fee": 60,
         "details": "Experience the dynamic blend of jazz and contemporary dance styles in this fusion class.",
-        "image": "https://img.freepik.com/free-photo/young-man-break-dancing-wall-background_155003-8450.jpg?w=740&t=st=1686160371~exp=1686160971~hmac=822e1aa5f65e5bf5d1dca91f3a8686bb04075369ae4b80be569ab9ca08d661f0"
+        "image": "https://img.freepik.com/free-photo/young-man-break-dancing-wall-background_155003-8450.jpg?w=740&t=st=1686160371~exp=1686160971~hmac=822e1aa5f65e5bf5d1dca91f3a8686bb04075369ae4b80be569ab9ca08d661f0",
+        "status": "approved",
+        "instructorEmail": "julia@example.com",
+        "enrolledCount": 10,
+        "students": []
     }
 ]

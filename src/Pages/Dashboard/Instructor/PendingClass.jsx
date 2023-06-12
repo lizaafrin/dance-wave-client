@@ -29,7 +29,7 @@ const PendingClass = () => {
     return (
         <div>
             <h2 className='text-2xl text-center mb-4 font-semibold'>My Pending Classes</h2>
-            <table className="table w-full lg:ms-10 bg-orange-100">
+            <table className="table w-full bg-orange-100">
                 {/* head */}
                 <thead className='bg-orange-300 '>
                     <tr>

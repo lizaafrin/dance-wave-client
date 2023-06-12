@@ -52,7 +52,7 @@ const SelectedClass = () => {
                         <button className="btn btn-warning btn-sm">Pay</button>
                     </Link> */}
                 </div>
-                <table className="table w-full lg:ms-10 bg-orange-100">
+                <table className="table w-full  bg-orange-100">
                     {/* head */}
                     <thead className='bg-orange-300 '>
                         <tr>

@@ -21,6 +21,7 @@ import PendingClass from "../Pages/Dashboard/Instructor/PendingClass";
 import SelectedClass from "../Pages/Dashboard/Student/SelectedClass";
 import AllUsers from "../Pages/Dashboard/Admin/AllUsers";
 import ManageClasses from "../Pages/Dashboard/Admin/ManageClasses";
+import Payment from "../Pages/Dashboard/Student/Payment";
 
 
 export const router = createBrowserRouter([
@@ -63,6 +64,10 @@ export const router = createBrowserRouter([
             {
                 path: '/dashboard/selectedclasses',
                 element: <StudentRoute><SelectedClass></SelectedClass></StudentRoute>
+            },
+            {
+                path: '/dashboard/payment',
+                element: <StudentRoute><Payment></Payment></StudentRoute>
             },
             // Admin routes
             {

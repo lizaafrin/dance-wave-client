@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { NavLink, Outlet, useLocation } from 'react-router-dom';
 import { FaBars, FaEnvelope, FaEnvelopeOpenText, FaFileExcel, FaHome, FaRegAddressBook, FaShoppingBag, FaSignOutAlt, FaWallet } from 'react-icons/fa';
 import { AuthContext } from '../provider/AuthProvider';
+import bg from '../assets/bg.jpg'
 
 const DashboardLayout = () => {
     const { user, userData, logOut } = useContext(AuthContext);
@@ -15,14 +16,12 @@ const DashboardLayout = () => {
 
     return (
 
-        <div className="drawer lg:drawer-open">
+        <div className="drawer md:drawer-open bg-orange-100 ">
             <input id="my-drawer-2" type="checkbox" className="drawer-toggle" />
-            <div className="drawer-content flex flex-col justify-center w-full">
+            <div className="drawer-content flex flex-col justify-center w-full bg-amber-100">
                 {/* Page content here */}
-                <label htmlFor="my-drawer-2" className="btn  btn-outline btn-sm border-t-4 border-b-4 bg-orange-100 drawer-button mt-20 mb-10 lg:hidden w-fit mx-auto">Open drawer</label>                                                                                           
-                {/* <SelectedClass></SelectedClass> */}
-                <Outlet></Outlet>
-
+                <label htmlFor="my-drawer-2" className="btn  btn-outline btn-sm border-t-4 border-b-4 drawer-button mt-20 mb-10 md:hidden w-fit mx-auto">Open drawer</label>                                                                         
+                <Outlet className=''></Outlet>
             </div>
             <div className="drawer-side">
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>
@@ -56,7 +55,7 @@ const DashboardLayout = () => {
                                     <>
                                         <li><NavLink to='/dashboard/selectedclasses'>Selected Classes</NavLink></li>
                                         <li><NavLink to='/enroll/ballet'><FaFileExcel></FaFileExcel> My Enrolled classess</NavLink></li>
-                                        <li><NavLink to='/dashboard/addclass'><FaWallet></FaWallet>Payment History</NavLink></li>
+                                        <li><NavLink to='/dashboard/payment'><FaWallet></FaWallet>Payment History</NavLink></li>
                                         <li><NavLink to='/enroll/ballet'><FaEnvelopeOpenText></FaEnvelopeOpenText>Feedback</NavLink></li>
                                     </>
                     }
