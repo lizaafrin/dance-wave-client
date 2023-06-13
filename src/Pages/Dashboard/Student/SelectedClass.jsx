@@ -9,7 +9,7 @@ const SelectedClass = () => {
 
     const [selectedClass, refetch] = useSelectedClass();
     // console.log(selectedClass);
-    const totalFee = selectedClass.reduce((sum, item) => item.fee + sum, 0)
+    const unpaidClasses = selectedClass.filter(a => a.status === 'unpaid')
 
     const handleDelete = item => {
         Swal.fire({
@@ -47,7 +47,7 @@ const SelectedClass = () => {
                     <title>Dancewave | Selected Class</title>
                 </Helmet>
                 <div className="font-semibold h-[60px] items-center mb-10 text-center text-amber-900">
-                    <h3 className='text-center font-bold text-2xl underline text-orange-500'>All Selected Class : {selectedClass.length}</h3>
+                    <h3 className='text-center font-bold text-2xl underline text-orange-500'>All Selected Class : {unpaidClasses.length}</h3>
                     {/* <h3 className="text-xl">Total Course Fee: ${totalFee}</h3> */}
                     {/* <Link to='/dashboard/payment'>
                         <button className="btn btn-warning btn-sm">Pay</button>
@@ -69,7 +69,7 @@ const SelectedClass = () => {
                     <tbody>
                         {/* row 1 */}
                         {
-                            selectedClass.map((item, index) => <tr key={item._id}>
+                            unpaidClasses.map((item, index) => <tr key={item._id}>
                                 <td>
                                     {index + 1}
                                 </td>

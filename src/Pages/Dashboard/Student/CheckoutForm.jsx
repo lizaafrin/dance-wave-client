@@ -76,11 +76,11 @@ const CheckoutForm = ({ selectedClass, fee }) => {
       setTransactionId(paymentIntent.id);
       // save payment info to server
       const payment = {
-        email: user?.email,
         transactionId: paymentIntent.id,
-        fee,
         date: new Date(),
-        paymentStatus: 'Succeed',
+        enrolledClass: selectedClass.name,
+        instructorEmail: selectedClass.instructorEmail,
+        paymentStatus: 'Paid',
       }
       Swal.fire({
         position: 'top-end',
@@ -89,6 +89,26 @@ const CheckoutForm = ({ selectedClass, fee }) => {
         showConfirmButton: false,
         timer: 1500
       })
+      fetch('http://localhost:5000/selectedclasses', {
+        method: 'PATCH',
+        headers: {
+          'content-Type': 'application/json'
+        },
+        body: JSON.stringify(payment)
+      })
+        .then(res => res.json())
+        .then(data => {
+          console.log(data)
+          if (data.modifiedCount) {
+            Swal.fire({
+              position: 'top-end',
+              icon: 'success',
+              title: `You have sucessfully enrolled in ${selectedClass.name} `,
+              showConfirmButton: false,
+              timer: 1500
+            })
+          }
+        })
       navigate('/dashboard/selectedclasses')
     }
 

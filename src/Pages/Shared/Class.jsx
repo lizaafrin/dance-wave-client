@@ -7,8 +7,7 @@ import Swal from 'sweetalert2';
 import useSelectedClass from '../../Hooks/useSelectedClass';
 
 const Class = ({ item }) => {
-    const { name, details, image, fee, instructorName, instructorEmail, availableSeats, _id
-    } = item;
+    const { name, details, image, fee, instructorName, instructorEmail, availableSeats } = item;
     const { user, userData } = useContext(AuthContext);
     const currentUser = userData.find(k => user?.email === k.email);
     const navigate = useNavigate();

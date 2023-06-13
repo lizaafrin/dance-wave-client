@@ -23,6 +23,7 @@ import AllUsers from "../Pages/Dashboard/Admin/AllUsers";
 import ManageClasses from "../Pages/Dashboard/Admin/ManageClasses";
 import Payment from "../Pages/Dashboard/Student/Payment";
 import AllInstructor from "../Pages/AllInstructor/AllInstructor";
+import PaidClass from "../Pages/Dashboard/Student/PaidClass";
 
 
 export const router = createBrowserRouter([
@@ -73,6 +74,10 @@ export const router = createBrowserRouter([
             {
                 path: '/dashboard/payment',
                 element: <StudentRoute><Payment></Payment></StudentRoute>
+            },
+            {
+                path: '/dashboard/enrolled',
+                element: <StudentRoute><PaidClass></PaidClass></StudentRoute>
             },
             // Admin routes
             {
