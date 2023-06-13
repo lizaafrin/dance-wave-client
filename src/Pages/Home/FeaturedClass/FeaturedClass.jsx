@@ -26,7 +26,7 @@ const FeaturedClass = () => {
                     {/* <button className="btn btn-outline border-0 border-b-4 mt-4">Order Now</button> */}
                 </div>
                 <div data-aos="zoom-in">
-                    <img className='rounded-lg' src={featuredImg} alt="" />
+                    <img className='rounded-3xl pt-4' src={featuredImg} alt="" />
                 </div>
             </div>
         </div>

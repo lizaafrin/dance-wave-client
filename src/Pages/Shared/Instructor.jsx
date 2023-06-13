@@ -8,7 +8,7 @@ const Instructor = ({ item }) => {
     const { name, image, email, bio } = item;
     return (
         <>
-            <div className="card w-96 mx-auto shadow-xl">
+            <div className="card w-60 h-fit lg:w-96 mx-auto shadow-xl">
                 <figure><img className='rounded-e-full rounded-t-full'src={image} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2  className="card-title">{name}</h2>

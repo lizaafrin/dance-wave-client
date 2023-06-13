@@ -3,7 +3,7 @@ import React from 'react';
 const SectionTitle = ({ heading, subHeading }) => {
     return (
         <>
-            <div className="mx-auto text-center md:w-3/12 mt-24">
+            <div className="mx-auto text-center w-1/2 md:w-3/12 mt-24">
                 <p className="text-yellow-600 mb-2">{" "}{subHeading}{" "}</p>
                 <hr className='mb-1 border-yellow-600' />
                 <hr className='mb-1 border-yellow-600' />

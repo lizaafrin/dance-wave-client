@@ -33,23 +33,23 @@ const Category = () => {
             >
                 <SwiperSlide >
                     <img src={slide1} alt="" />
-                    <h3 className="text-3xl text-white text-center uppercase -mt-12">Ballet</h3>
+                    <h3 className="text-md lg:text-3xl text-white text-center uppercase -mt-10 lg:-mt-12">Ballet</h3>
                 </SwiperSlide>
                 <SwiperSlide >
                     <img src={slide2} alt="" />
-                    <h3 className="text-3xl text-white text-center uppercase -mt-12">Classic</h3>
+                    <h3 className="text-md lg:text-3xl text-white text-center uppercase -mt-10 lg:-mt-12">Classic</h3>
                 </SwiperSlide>
                 <SwiperSlide >
                     <img src={slide3} alt="" />
-                    <h3 className="text-3xl text-white text-center uppercase -mt-12">Tap dance</h3>
+                    <h3 className="text-md lg:text-3xl text-white text-center uppercase -mt-10 lg:-mt-12">Tap dance</h3>
                 </SwiperSlide>
                 <SwiperSlide >
                     <img src={slide4} alt="" />
-                    <h3 className="text-3xl text-white text-center uppercase -mt-12">Hip-Hop</h3>
+                    <h3 className="text-md lg:text-3xl text-white text-center uppercase -mt-10 lg:-mt-12">Hip-Hop</h3>
                 </SwiperSlide>
                 <SwiperSlide >
                     <img src={slide5} alt="" />
-                    <h3 className="text-3xl text-white text-center uppercase -mt-12">Samba</h3>
+                    <h3 className="text-md lg:text-3xl text-white text-center uppercase -mt-10 lg:-mt-12">Samba</h3>
                 </SwiperSlide>
             </Swiper>
         </>

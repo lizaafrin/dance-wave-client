@@ -20,7 +20,7 @@ const PopularInstructor = () => {
                 heading={"From Our Instructors"}></SectionTitle>
 
             <Marquee pauseOnHover='true'>
-                <div className='grid sm:grid-cols-3 md:grid-cols-6 gap-4 mt-12'>
+                <div className='grid grid-cols-6 gap-4 mt-12'>
                     {
                         instructors.slice(0, 6).map(item => <Instructor
                             key={item._id}

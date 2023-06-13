@@ -72,7 +72,7 @@ const Class = ({ item }) => {
         <div className="card card-side border shadow-xl">
             <figure className='w-1/2'><img className='rounded-s-full rounded-t-3xl h-[95%]' src={image} alt="Movie" /></figure>
             <div className="card-body w-1/2">
-                <h2 className="card-title">{name}</h2>
+                <h2 className="card-title underline text-orange-400">{name}</h2>
                 <p  className='font-semibold'>Instructor: {instructorName}</p>
                 <p>{details}</p>
                 <p className='font-semibold'>Course Fee: {fee}$</p>
