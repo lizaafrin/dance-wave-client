@@ -3,6 +3,7 @@ import { FaAmazonPay, FaTrashAlt } from 'react-icons/fa';
 import Swal from 'sweetalert2';
 import { Helmet } from 'react-helmet-async';
 import useSelectedClass from '../../../Hooks/useSelectedClass';
+import { Link } from 'react-router-dom';
 
 const SelectedClass = () => {
 
@@ -46,8 +47,8 @@ const SelectedClass = () => {
                     <title>Dancewave | Selected Class</title>
                 </Helmet>
                 <div className="font-semibold h-[60px] items-center mb-10 text-center text-amber-900">
-                    <h3 className="text-2xl">All Selected Class : {selectedClass.length}</h3>
-                    <h3 className="text-xl">Total Course Fee: ${totalFee}</h3>
+                    <h3 className='text-center font-bold text-2xl underline text-orange-500'>All Selected Class : {selectedClass.length}</h3>
+                    {/* <h3 className="text-xl">Total Course Fee: ${totalFee}</h3> */}
                     {/* <Link to='/dashboard/payment'>
                         <button className="btn btn-warning btn-sm">Pay</button>
                     </Link> */}
@@ -79,7 +80,7 @@ const SelectedClass = () => {
                                     <button onClick={() => handleDelete(item)} className="btn btn-ghost bg-gray-200 text-black"><FaTrashAlt></FaTrashAlt></button>
                                 </td>
                                 <td>
-                                    <button className=' btn-ghost bg-orange-300 text-3xl rounded-lg'><FaAmazonPay></FaAmazonPay></button>
+                                    <Link to='/dashboard/payment'> <button className=' btn-ghost bg-orange-300 text-3xl rounded-lg'><FaAmazonPay></FaAmazonPay></button></Link>
                                 </td>
                             </tr>)
                         }

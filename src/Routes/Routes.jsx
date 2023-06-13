@@ -22,6 +22,7 @@ import SelectedClass from "../Pages/Dashboard/Student/SelectedClass";
 import AllUsers from "../Pages/Dashboard/Admin/AllUsers";
 import ManageClasses from "../Pages/Dashboard/Admin/ManageClasses";
 import Payment from "../Pages/Dashboard/Student/Payment";
+import AllInstructor from "../Pages/AllInstructor/AllInstructor";
 
 
 export const router = createBrowserRouter([
@@ -39,6 +40,10 @@ export const router = createBrowserRouter([
             {
                 path: '/classes',
                 element: <AllDanceClass></AllDanceClass>,
+            },
+            {
+                path: '/allinstructors',
+                element:<AllInstructor></AllInstructor>,
             },
             {
                 path: '/enroll/:category',
