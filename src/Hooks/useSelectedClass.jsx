@@ -7,7 +7,7 @@ import { AuthContext } from '../provider/AuthProvider';
 import useAxiosSecure from './useAxiosSecure';
 
 const useSelectedClass = () => {
-    const {user,loading} = useContext(AuthContext);
+    const {user, loading} = useContext(AuthContext);
     // const token = localStorage.getItem('access-token');
     // // const [axiosSecure] = useAxiosSecure();
     const { refetch , data: selectedClass=[] } = useQuery({

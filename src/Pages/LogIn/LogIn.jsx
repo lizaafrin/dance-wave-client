@@ -79,7 +79,7 @@ const LogIn = () => {
             <div style={{ backgroundImage: `url(${bg})` }} className="hero min-h-screen">
                 <div className="hero-content flex-col lg:flex-row-reverse gap-10">
                     <div className="text-center lg:text-left w-1/2">
-                        <img className='w-full' src={loginImg} alt="" srcset="" />
+                        <img className='w-full' src={loginImg} alt=""/>
                     </div>
                     <div className="card flex-shrink-0 w-1/2 max-w-sm shadow-2xl">
                         <form onSubmit={handleSubmit(onSubmit)} className="card-body">

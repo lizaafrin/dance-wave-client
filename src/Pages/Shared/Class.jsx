@@ -7,7 +7,7 @@ import Swal from 'sweetalert2';
 import useSelectedClass from '../../Hooks/useSelectedClass';
 
 const Class = ({ item }) => {
-    const { name, details, image, fee, instructorName, availableSeats, _id
+    const { name, details, image, fee, instructorName, instructorEmail, availableSeats, _id
     } = item;
     const { user, userData } = useContext(AuthContext);
     const currentUser = userData.find(k => user?.email === k.email);
@@ -19,7 +19,7 @@ const Class = ({ item }) => {
         console.log(item);
         if (user && user.email) {
             const selectedClass = {
-                name, instructorName, fee, email: user.email
+                name, instructorName, fee, email: user.email, instructorEmail, status: 'unpaid'
             }
             fetch('http://localhost:5000/selectedclass', {
                 method: 'POST',
@@ -70,7 +70,7 @@ const Class = ({ item }) => {
     }
     return (
         <div className="card card-side border shadow-xl">
-            <figure className='w-1/2'><img className='rounded-s-full rounded-t-3xl h-[95%]' src={image} alt="Movie" /></figure>
+            <figure className='w-1/2'><img className='rounded-b-full rounded-t-full h-[95%]' src={image} alt="Movie" /></figure>
             <div className="card-body w-1/2">
                 <h2 className="card-title underline text-orange-400">{name}</h2>
                 <p  className='font-semibold'>Instructor: {instructorName}</p>

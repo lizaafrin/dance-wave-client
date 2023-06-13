@@ -5,7 +5,7 @@ import img1 from '../../assets/male1 (2).jpg'
 
 const Instructor = ({ item }) => {
 
-    const { name, image, email, bio } = item;
+    const { name, image, email, bio ,number_Of_Classes} = item;
     return (
         <>
             <div className="card w-60 h-fit lg:w-96 mx-auto shadow-xl">
@@ -13,6 +13,7 @@ const Instructor = ({ item }) => {
                 <div className="card-body">
                     <h2  className="card-title">{name}</h2>
                     <p>{bio.slice(0,95)}....</p>
+
                     <div className="card-actions justify-end">
                         <button className="btn btn-outline btn-sm border-t-4 border-b-4 bg-orange-100">Explore</button>
                     </div>

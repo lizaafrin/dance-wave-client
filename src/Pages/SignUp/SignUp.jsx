@@ -101,7 +101,7 @@ const SignUp = () => {
         <div style={{ backgroundImage: `url(${bg})` }} className="hero min-h-screen bg-base-200">
             <div className="hero-content flex-col lg:flex-row-reverse gap-10">
                 <div className="text-center lg:text-left w-1/2">
-                    <img className='w-full' src={signupImg} alt="" srcset="" />
+                    <img className='w-full' src={signupImg} alt=""/>
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl">
                     <form onSubmit={handleSubmit(onSubmit)} className="card-body">

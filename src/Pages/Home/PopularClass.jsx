@@ -7,16 +7,8 @@ import useClass from '../../Hooks/useClass';
 
 const PopularClass = () => {
     const [classes] = useClass();
-    // const [classes, setclasses]= useState([]);
-    // useEffect(()=>{
-    //     fetch('danceClasses.json')
-    //     .then(res=> res.json())
-    //     .then(data=> {
-    //         const popularClass = data.filter(item => item.category === 'Ballet');
-    //         setclasses(popularClass)})
-          
-    // }, [])
-    // console.log(setclasses);
+    const popular = classes.sort((a, b) => b.enrolledCount - a.enrolledCount);
+    // console.log(popular);
     return (
         <section>
             <SectionTitle subHeading={"Popular Classes"}
@@ -24,7 +16,7 @@ const PopularClass = () => {
 
         <div className='grid md:grid-cols-3 gap-6 mt-12'>
             {
-                classes.slice(0,6).map(item => <Class
+                popular.slice(0,6).map(item => <Class
                 key ={item._id}
                 item={item}
                 

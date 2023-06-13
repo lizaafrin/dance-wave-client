@@ -21,7 +21,7 @@ const DashboardLayout = () => {
             <div className="drawer-content flex flex-col justify-center w-full bg-amber-100">
                 {/* Page content here */}
                 <label htmlFor="my-drawer-2" className="btn  btn-outline btn-sm border-t-4 border-b-4 drawer-button mt-20 mb-10 md:hidden w-fit mx-auto">Open drawer</label>                                                                         
-                <Outlet className=''></Outlet>
+                <Outlet className='flex justify-center'></Outlet>
             </div>
             <div className="drawer-side">
                 <label htmlFor="my-drawer-2" className="drawer-overlay"></label>

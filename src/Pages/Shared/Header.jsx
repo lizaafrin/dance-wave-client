@@ -15,7 +15,7 @@ const Header = () => {
     const navItems = <>
         <li><Link to='/'>Home</Link></li>
         <li><Link to='/classes'>Categories</Link></li>
-        <li><Link to='/enroll/Salsa'>EnRoll Now</Link></li>
+        <li><Link to='/enroll/Salsa'>All Classes</Link></li>
         <li><Link to='/allinstructors'>Instructors</Link></li>
         {user && <li><Link to='/dashboard'>Dashboard</Link></li>}
 
