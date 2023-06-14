@@ -22,7 +22,7 @@ const Renowned = () => {
                         Salsa Music
                     </h2>
                     <hr className='w-1/12 mx-auto m-2 font-bold' />
-                    <p className='text-slate-500 text-sm '>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    <p className='text-slate-500 text-sm '> Salsa musician is an artist skilled in playing vibrant Latin music, blending elements of Afro-Cuban rhythms, percussion, brass instruments, and infectious melodies.</p>
                 </div>
                 <div  data-aos="zoom-in">
                     <img className='w-24 h-24  rounded-full mx-auto' src='https://img.freepik.com/free-photo/handsome-young-acoustic-guitar-blues-player-with-tattoos-arms-performing-his-musical-skills_613910-9241.jpg?w=826&t=st=1686485872~exp=1686486472~hmac=8807eccad41394f23ae67c2dcd280d788090e709117545cc4b66df2ea85e4e5b' alt=""/>
@@ -31,7 +31,7 @@ const Renowned = () => {
                         Hiphop specialist
                     </h2>
                     <hr className='w-1/12 mx-auto m-2 font-bold' />
-                    <p className='text-slate-500 text-sm '>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    <p className='text-slate-500 text-sm '>Hip-hop dancing is an energetic and expressive dance style rooted in urban culture, characterized by dynamic movements, intricate footwork, and improvisation. </p>
                 </div>
                 <div data-aos="zoom-in">
                     <img className='w-24 h-24 rounded-full mx-auto' src='https://img.freepik.com/free-photo/smiley-man-playing-guitar_23-2148628982.jpg?w=826&t=st=1686485975~exp=1686486575~hmac=00e2429f6bd6c6e328ec06e5fbe77a423e356fdd157f80d2748c995d2ac326dd' alt=""/>
@@ -40,7 +40,7 @@ const Renowned = () => {
                         Salsa Dance
                     </h2>
                     <hr className='w-1/12 mx-auto m-2 font-bold' />
-                    <p className='text-slate-500 text-sm '>Lorem ipsum dolor, sit amet consectetur adipisicing elit. .</p>
+                    <p className='text-slate-500 text-sm '>Salsa dancing is a vibrant partner dance style originating from the Caribbean, characterized by rhythmic footwork, energetic spins, and a strong connection between dancers..</p>
                 </div>
             </div>
         </div>

@@ -8,24 +8,24 @@ import useAxiosSecure from './useAxiosSecure';
 
 const useSelectedClass = () => {
     const {user, loading} = useContext(AuthContext);
-    // const token = localStorage.getItem('access-token');
-    // // const [axiosSecure] = useAxiosSecure();
+    const token = localStorage.getItem('access-token');
+    const [axiosSecure] = useAxiosSecure();
     const { refetch , data: selectedClass=[] } = useQuery({
         queryKey:['selectedClass', user?.email],
-        // enabled: !loading,
-        // queryFn: async ()=>{
-        //     const res = await axiosSecure(`/selectedclass?email=${user.email}`)
-        //     return res.data;}
+        enabled: !loading,
         queryFn: async ()=>{
-            const res = await fetch(`http://localhost:5000/selectedclass?email=${user.email}`,
-            // {
-            //    headers:{
-            //     authorization: `bearer ${token}`
-            //    } 
-            // }
-            )
-            return res.json();
-        }
+            const res = await axiosSecure.get(`/selectedclass?email=${user.email}`)
+            return res.data;}
+        // queryFn: async ()=>{
+        //     const res = await fetch(`http://localhost:5000/selectedclass?email=${user.email}`,
+        //     {
+        //        headers:{
+        //         authorization: `bearer ${token}`
+        //        } 
+        //     }
+        //     )
+        //     return res.json();
+        // }
         }
     )
     return [ selectedClass, refetch]

@@ -53,10 +53,10 @@ const DashboardLayout = () => {
                                     <li><NavLink to='/dashboard/pendingclasses'><FaWallet></FaWallet>My Added Classes</NavLink></li>
                                 </> :
                                     <>
-                                        <li><NavLink to='/dashboard/selectedclasses'>Selected Classes</NavLink></li>
+                                        <li><NavLink to='/dashboard/selectedclasses'><FaRegAddressBook></FaRegAddressBook>Selected Classes</NavLink></li>
                                         <li><NavLink to='/dashboard/enrolled'><FaFileExcel></FaFileExcel> My Enrolled classess</NavLink></li>
-                                        <li><NavLink to='/dashboard/payment'><FaWallet></FaWallet>Payment History</NavLink></li>
-                                        <li><NavLink to='/enroll/ballet'><FaEnvelopeOpenText></FaEnvelopeOpenText>Feedback</NavLink></li>
+                                        <li><NavLink to='/dashboard/paymenthistory'><FaWallet></FaWallet>Payment History</NavLink></li>
+                                        {/* <li><NavLink to='/enroll/ballet'><FaEnvelopeOpenText></FaEnvelopeOpenText>Feedback</NavLink></li> */}
                                     </>
                     }
                 </ul>

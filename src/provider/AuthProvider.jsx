@@ -11,6 +11,7 @@ import {
 } from "firebase/auth";
 import app from "../firebase/Firebase.config";
 import axios from "axios";
+import { useQuery } from "@tanstack/react-query";
 
 const googleAuthProvider = new GoogleAuthProvider();
 
@@ -25,16 +26,25 @@ const AuthProvider = ({ children }) => {
     // const [userData, setUserData] = useState([])
 
     // console.log(user);
+    // const { data: usersArray = [], refetch } = useQuery({
+    //     queryKey: ['usersArray'],
+    //     queryFn: async () => {
+    //         const res = await fetch('http://localhost:5000/users')
+    //         return res.json();
+    //     }
+
+    // })
+    // console.log(data);
 
     useEffect(() => {
         fetch('http://localhost:5000/users')
             .then(res => res.json())
             .then(data => {
-                setLoading(true)
+                setLoading(true);
                 setUserData(data);
             })
     }, [])
-    
+
     // console.log(currentUser);
 
     const createUser = (email, password) => {
@@ -64,21 +74,23 @@ const AuthProvider = ({ children }) => {
 
     useEffect(() => {
         const unsubscribe = onAuthStateChanged(auth, loggedUser => {
-            // console.log("Logged in user inside auth state Observer", loggedUser);
             setUser(loggedUser);
+            // fethching using Axios Starts
+            if (loggedUser) {
+                axios.post('http://localhost:5000/jwt', { email: loggedUser.email })
+                    .then(data => {
+                        // console.log(data.data);
+                        localStorage.setItem('access-token', data.data.token);
+                        setLoading(false);
+                    })
+            }
+            else {
+                localStorage.removeItem('access-token');
+                setLoading(false);
 
-            // if(loggedUser){
-            //     axios.post('http://localhost:5000/jwt',{email: loggedUser.email})
-            //     .then(data => {
-            //         // console.log(data.data);
-            //         localStorage.setItem('access-token', data.data.token);
-            //         // setLoading(false);
-            //     })
-            // }
-            // else{
-            //     localStorage.removeItem('access-token');
-            // }
-            setLoading(false);
+            }
+            // fethching using Axios ends
+            
         });
         return () => {
             unsubscribe();

@@ -21,13 +21,15 @@ const SelectedClass = () => {
             cancelButtonColor: '#d33',
             confirmButtonText: 'Yes, delete it!'
         }).then((result) => {
+            // console.log(result);
             if (result.isConfirmed) {
                 fetch(`http://localhost:5000/selectedclass/${item._id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
                     .then(data => {
-                        if (data.deleteCount > 0) {
+                        console.log(data);
+                        if (data.deletedCount > 0) {
                             refetch();
                             Swal.fire(
                                 'Deleted!',
@@ -35,6 +37,7 @@ const SelectedClass = () => {
                                 'success'
                             )
                         }
+                        
                     })
             }
         })

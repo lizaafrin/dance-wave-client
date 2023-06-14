@@ -10,6 +10,7 @@ const Class = ({ item }) => {
     const { name, details, image, fee, instructorName, instructorEmail, availableSeats } = item;
     const { user, userData } = useContext(AuthContext);
     const currentUser = userData.find(k => user?.email === k.email);
+    console.log(user, currentUser);
     const navigate = useNavigate();
     const location = useLocation();
     const [selectedClass, refetch] = useSelectedClass();
@@ -18,7 +19,7 @@ const Class = ({ item }) => {
         console.log(item);
         if (user && user.email) {
             const selectedClass = {
-                name, instructorName, fee, email: user.email, instructorEmail, status: 'unpaid'
+                name, instructorName, fee,image, email: user.email, instructorEmail, status: 'unpaid'
             }
             fetch('http://localhost:5000/selectedclass', {
                 method: 'POST',
@@ -78,7 +79,7 @@ const Class = ({ item }) => {
                 <p className='font-semibold'>Available Seats: {availableSeats}</p>
 
                 <div className="card-actions justify-start">
-                    {currentUser?.role === 'student' ?
+                    {currentUser?.role == 'student' ?
                         <button onClick={() => handleSelect(item)} className="btn btn-outline btn-sm border-t-4 border-b-4 bg-orange-200">Select</button>
                         :
                         <button className="btn btn-outline btn-sm border-t-4 border-b-4 bg-orange-100" disabled>SElect</button>

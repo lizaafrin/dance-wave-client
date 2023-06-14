@@ -1,18 +1,26 @@
 import { useQuery } from '@tanstack/react-query';
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import {  FaAward, FaIdBadge } from 'react-icons/fa';
+import { FaAward, FaIdBadge } from 'react-icons/fa';
 import Swal from 'sweetalert2';
+import useAxiosSecure from '../../../Hooks/useAxiosSecure';
 
 
 const AllUsers = () => {
     // const [disabled, setDisabled] = useState(false);
-    const { data: users = [], refetch } = useQuery(['users'], async () => {
-        const response = await fetch('http://localhost:5000/users',)
-        return response.json();
 
+    const[axiosSecure] = useAxiosSecure();
+    const { data: users = [], refetch } = useQuery(['users'], async () => {
+        const res = await axiosSecure.get('/users')
+        return res.data;
     })
-    console.log(users);
+
+    // const { data: users = [], refetch } = useQuery(['users'], async () => {
+    //     const response = await fetch('http://localhost:5000/users',)
+    //     return response.json();
+
+    // })
+    // console.log(users);
     const handleMakeAdmin = (user) => {
         fetch(`http://localhost:5000/users/admin/${user._id}`, {
             method: 'PATCH'
@@ -53,7 +61,7 @@ const AllUsers = () => {
                 }
             })
     };
-    
+
     return (
         <div>
             <Helmet>
@@ -95,7 +103,7 @@ const AllUsers = () => {
                                     <button onClick={() => handleMakeAdmin(user)} className="text-xl bg-orange-400 py-2 px-4 rounded-lg"><FaAward></FaAward></button> : <button className="text-xl bg-orange-200 py-2 px-4 rounded-lg " disabled><FaAward></FaAward></button>
                                 }
                             </td>
-                            <td>{user.role === 'admin' ?<button className="text-sm bg-orange-200 py-2 px-4 rounded-lg" disabled>Feedback</button> : <button onClick={() => window.my_modal_5.showModal()} className="text-sm bg-orange-400 py-2 px-4 rounded-lg">Feedback</button>
+                            <td>{user.role === 'admin' ? <button className="text-sm bg-orange-200 py-2 px-4 rounded-lg" disabled>Feedback</button> : <button onClick={() => window.my_modal_5.showModal()} className="text-sm bg-orange-400 py-2 px-4 rounded-lg">Feedback</button>
                             }</td>
                         </tr>)
                     }

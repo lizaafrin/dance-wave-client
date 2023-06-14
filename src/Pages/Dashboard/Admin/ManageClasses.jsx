@@ -3,17 +3,23 @@ import danceimg from '../../../assets/salsa2.jpg';
 import Swal from 'sweetalert2';
 import { AuthContext } from '../../../provider/AuthProvider';
 import { useQuery } from '@tanstack/react-query';
+import useAxiosSecure from '../../../Hooks/useAxiosSecure';
 
 
 const ManageClasses = () => {
     const { loading, setLoading } = useContext(AuthContext);
     // const [pendingClasses, setPendingClasses] = useState([]);
     const [disabled, setDisbled] = useState(false);
+    // const { data: pendingClasses = [], refetch } = useQuery(['pendingClasses'], async () => {
+    //     const response = await fetch('http://localhost:5000/dashboard/pendingclasses',)
+    //     return response.json();
 
+    // })
+
+    const[axiosSecure] = useAxiosSecure();
     const { data: pendingClasses = [], refetch } = useQuery(['pendingClasses'], async () => {
-        const response = await fetch('http://localhost:5000/dashboard/pendingclasses',)
-        return response.json();
-
+        const res = await axiosSecure.get('/dashboard/pendingclasses')
+        return res.data;
     })
     // useEffect(() => {
     //     fetch('http://localhost:5000/dashboard/pendingclasses')

@@ -5,6 +5,7 @@ import { AuthContext } from '../../../provider/AuthProvider';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Swal from 'sweetalert2';
+import useAxiosSecure from '../../../Hooks/useAxiosSecure';
 
 const CheckoutForm = ({ selectedClass, fee }) => {
   const stripe = useStripe();
@@ -15,8 +16,18 @@ const CheckoutForm = ({ selectedClass, fee }) => {
   const [isProcessing, setProcessing] = useState(false);
   const [cardError, setCardError] = useState('');
   const [transactionId, setTransactionId] = useState('');
+  const [axiosSecure] = useAxiosSecure();
   const navigate = useNavigate();
 
+  // useEffect(() => {
+  //   if (fee > 0) {
+  //     axiosSecure.post('/create-payment-intent', {fee})
+  //     .then(res=>{
+  //       console.log(res.data.clientSecret);
+  //       setClientSecret(res.data.clientSecret);
+  //     })
+  //   }
+  // }, [fee, axiosSecure])
   useEffect(() => {
     fetch('http://localhost:5000/create-payment-intent', {
       method: 'POST',
