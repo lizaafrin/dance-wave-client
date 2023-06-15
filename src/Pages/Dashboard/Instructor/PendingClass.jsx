@@ -7,15 +7,17 @@ import { AuthContext } from '../../../provider/AuthProvider';
 
 const PendingClass = () => {
     const [pendingClasses, setPendingClasses] = useState([]);
-    const { user, userData, loading } = useContext(AuthContext);
-    const currentUser = userData.find(k => user?.email === k.email);
+    const { user } = useContext(AuthContext);
+    
     useEffect(() => {
-        fetch(`http://localhost:5000/pendingclasses/${currentUser.email}`, {
+        fetch(`https://dancewave-server-side.vercel.app/pendingclasses/${user.email}`,
+         {
             method: 'GET',
             headers: {
                 'content-Type': 'application/json'
             },
-        })
+        }
+        )
             .then(res => res.json())
             .then(data => {
                 setPendingClasses(data);

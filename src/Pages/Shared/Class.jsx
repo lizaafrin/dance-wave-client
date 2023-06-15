@@ -8,9 +8,8 @@ import useSelectedClass from '../../Hooks/useSelectedClass';
 
 const Class = ({ item }) => {
     const { name, details, image, fee, instructorName, instructorEmail, availableSeats } = item;
-    const { user, userData } = useContext(AuthContext);
-    const currentUser = userData.find(k => user?.email === k.email);
-    console.log(user, currentUser);
+    const { user, userRole } = useContext(AuthContext);
+    
     const navigate = useNavigate();
     const location = useLocation();
     const [selectedClass, refetch] = useSelectedClass();
@@ -21,7 +20,7 @@ const Class = ({ item }) => {
             const selectedClass = {
                 name, instructorName, fee,image, email: user.email, instructorEmail, status: 'unpaid'
             }
-            fetch('http://localhost:5000/selectedclass', {
+            fetch('https://dancewave-server-side.vercel.app/selectedclass', {
                 method: 'POST',
                 headers: {
                     'content-Type': 'application/json'
@@ -79,7 +78,7 @@ const Class = ({ item }) => {
                 <p className='font-semibold'>Available Seats: {availableSeats}</p>
 
                 <div className="card-actions justify-start">
-                    {currentUser?.role == 'student' ?
+                    {userRole == 'student' ?
                         <button onClick={() => handleSelect(item)} className="btn btn-outline btn-sm border-t-4 border-b-4 bg-orange-200">Select</button>
                         :
                         <button className="btn btn-outline btn-sm border-t-4 border-b-4 bg-orange-100" disabled>SElect</button>

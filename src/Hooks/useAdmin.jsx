@@ -18,7 +18,7 @@ const useAdmin = () => {
     //     return res.data.admin;
     // }
     queryFn: async ()=>{
-        const res = await fetch(`http://localhost:5000/users/admin/${user.email}`,
+        const res = await fetch(`https://dancewave-server-side.vercel.app/users/admin/${user.email}`,
       //   {
       //      headers:{
       //       authorization: `bearer ${token}`

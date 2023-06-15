@@ -7,25 +7,26 @@ import { AuthContext } from '../provider/AuthProvider';
 import useAxiosSecure from './useAxiosSecure';
 
 const useSelectedClass = () => {
-    const {user, loading} = useContext(AuthContext);
-    const token = localStorage.getItem('access-token');
-    const [axiosSecure] = useAxiosSecure();
+    const { user } = useContext(AuthContext);
+    // console.log(user);
+    // const token = localStorage.getItem('access-token');
+    // const [axiosSecure] = useAxiosSecure();
     const { refetch , data: selectedClass=[] } = useQuery({
         queryKey:['selectedClass', user?.email],
-        enabled: !loading,
+    //     // enabled: !loading,
+    //     // queryFn: async ()=>{
+    //     //     const res = await axiosSecure.get(`/selectedclass?email=${user.email}`)
+    //     //     return res.data;}
         queryFn: async ()=>{
-            const res = await axiosSecure.get(`/selectedclass?email=${user.email}`)
-            return res.data;}
-        // queryFn: async ()=>{
-        //     const res = await fetch(`http://localhost:5000/selectedclass?email=${user.email}`,
-        //     {
-        //        headers:{
-        //         authorization: `bearer ${token}`
-        //        } 
-        //     }
-        //     )
-        //     return res.json();
-        // }
+            const res = await fetch(`https://dancewave-server-side.vercel.app/selectedclass?email=${user.email}`,
+            // {
+            //    headers:{
+            //     authorization: `bearer ${token}`
+            //    } 
+            // }
+            )
+            return res.json();
+        }
         }
     )
     return [ selectedClass, refetch]
@@ -37,7 +38,7 @@ export default useSelectedClass;
 
 // const [loading, setloading] = useState(true);
 // useEffect(()=>{
-//     fetch('http://localhost:5000/selectedclass')
+//     fetch('https://dancewave-server-side.vercel.app/selectedclass')
 //     .then(res=> res.json())
 //     .then(data=> {
 //         setSelectedClasses(data)})

@@ -11,7 +11,7 @@ const useInstructor = () => {
         //     const res = await axiosSecure(`/selectedclass?email=${user.email}`)
         //     return res.data;}
         queryFn: async ()=>{
-            const res = await fetch(`http://localhost:5000/popularInstructor?email=${user.email}`,
+            const res = await fetch(`https://dancewave-server-side.vercel.app/popularInstructor?email=${user.email}`,
             // {
             //    headers:{
             //     authorization: `bearer ${token}`

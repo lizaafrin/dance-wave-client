@@ -4,17 +4,16 @@ import { AuthContext } from '../provider/AuthProvider';
 import { useContext } from 'react';
 
 const StudentRoute = ({children}) => {
-    const { user, userData,loading } = useContext(AuthContext);
-    const currentUser = userData.find(k => user?.email === k.email);
-    console.log(currentUser);
+    const { user,userRole, loading } = useContext(AuthContext);
     const location = useLocation();
+    
     if (loading) {
         return <progress className="progress w-56"></progress>
     }
-    if (user && currentUser.role === "student") {
+    if (user && userRole === "student") {
         return children;
     }
-    // if ( currentUser.role === "student") {
+    // if ( userRole === "student") {
     //     return children;
     // }
     return <Navigate to='/' state={{ from: location }} replace />

@@ -21,6 +21,7 @@ const LogIn = () => {
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || "/";
+    console.log(from);
 
     const handleHideBtn = () => {
         setHidePass(current => !current);
@@ -31,7 +32,7 @@ const LogIn = () => {
         signIn(email, password)
             .then(result => {
                 const user = result.user;
-                console.log(user);
+                // console.log(user);
                 Swal.fire({
                     title: 'User login successful',
                     showClass: {
@@ -49,8 +50,8 @@ const LogIn = () => {
             .then(result => {
                 const loggedInUser = result.user;
                 console.log(loggedInUser);
-                const savedUser = { name: loggedInUser.displayName, email: loggedInUser.email, photoURL: loggedInUser.photoURL}
-                fetch('http://localhost:5000/users', {
+                const savedUser = { name: loggedInUser.displayName, email: loggedInUser.email, photoURL: loggedInUser.photoURL, role: 'student'}
+                fetch('https://dancewave-server-side.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

@@ -41,7 +41,7 @@ const SignUp = () => {
                     .then(() => {
                         const savedUser = { name: name, email: email, photoURL: photoURL, role: 'student' };
                         console.log(savedUser);
-                        fetch('http://localhost:5000/users', {
+                        fetch('https://dancewave-server-side.vercel.app/users', {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json'
@@ -74,7 +74,7 @@ const SignUp = () => {
                 const loggedInUser = result.user;
                 console.log(loggedInUser);
                 const savedUser = { name: loggedInUser.displayName, email: loggedInUser.email, photoURL: loggedInUser.photoURL, role: 'student' }
-                fetch('http://localhost:5000/users', {
+                fetch('https://dancewave-server-side.vercel.app/users', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

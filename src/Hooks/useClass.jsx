@@ -7,16 +7,17 @@ const useClass = () => {
     const [classes, setclasses]= useState([]);
     const [loading, setloading] = useState(true);
     useEffect(()=>{
-        fetch('http://localhost:5000/danceclasses')
+        fetch('https://dancewave-server-side.vercel.app/danceclasses')
         .then(res=> res.json())
         .then(data=> {
             setclasses(data)})
            setloading(false);
     }, [])
+    // console.log(classes);
     // const { data: classes = [], isLoading: loading, refetch } = useQuery({
     //     queryKey: ['classes'],
     //     queryFn: async () => {
-    //         const res = await fetch('http://localhost:5000/danceclasses')
+    //         const res = await fetch('https://dancewave-server-side.vercel.app/danceclasses')
     //         return res.json();
     //     }
     // });

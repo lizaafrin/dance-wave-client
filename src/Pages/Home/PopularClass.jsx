@@ -8,7 +8,7 @@ import useClass from '../../Hooks/useClass';
 const PopularClass = () => {
     const [classes] = useClass();
     const popular = classes.sort((a, b) => b.enrolledCount - a.enrolledCount);
-    // console.log(popular);
+    // console.log(classes);
     return (
         <section>
             <SectionTitle subHeading={"Popular Classes"}

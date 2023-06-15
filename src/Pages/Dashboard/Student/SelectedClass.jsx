@@ -23,7 +23,7 @@ const SelectedClass = () => {
         }).then((result) => {
             // console.log(result);
             if (result.isConfirmed) {
-                fetch(`http://localhost:5000/selectedclass/${item._id}`, {
+                fetch(`https://dancewave-server-side.vercel.app/selectedclass/${item._id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())

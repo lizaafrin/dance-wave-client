@@ -10,29 +10,30 @@ const ManageClasses = () => {
     const { loading, setLoading } = useContext(AuthContext);
     // const [pendingClasses, setPendingClasses] = useState([]);
     const [disabled, setDisbled] = useState(false);
-    // const { data: pendingClasses = [], refetch } = useQuery(['pendingClasses'], async () => {
-    //     const response = await fetch('http://localhost:5000/dashboard/pendingclasses',)
-    //     return response.json();
-
-    // })
-
-    const[axiosSecure] = useAxiosSecure();
     const { data: pendingClasses = [], refetch } = useQuery(['pendingClasses'], async () => {
-        const res = await axiosSecure.get('/dashboard/pendingclasses')
-        return res.data;
+        const response = await fetch('https://dancewave-server-side.vercel.app/dashboard/pendingclasses',)
+        return response.json();
+
     })
+
+    // const[axiosSecure] = useAxiosSecure();
+    // const { data: pendingClasses = [], refetch } = useQuery(['pendingClasses'], async () => {
+    //     const res = await axiosSecure.get('/dashboard/pendingclasses')
+    //     return res.data;
+    // })
     // useEffect(() => {
-    //     fetch('http://localhost:5000/dashboard/pendingclasses')
+    //     fetch('https://dancewave-server-side.vercel.app/dashboard/pendingclasses')
     //         .then(res => res.json())
     //         .then(data => {
     //             setPendingClasses(data);
     //         })
     // }, []);
 
+
     const handleApprove = (manageClass) => {
         setDisbled(true);
         setLoading(false);
-        fetch(`http://localhost:5000/dashboard/approvedclasses/${manageClass._id}`, {
+        fetch(`https://dancewave-server-side.vercel.app/dashboard/approvedclasses/${manageClass._id}`, {
             method: 'PATCH'
         })
             .then(res => res.json())
@@ -50,7 +51,7 @@ const ManageClasses = () => {
                 }
             })
 
-        fetch('http://localhost:5000/danceclasses', {
+        fetch('https://dancewave-server-side.vercel.app/danceclasses', {
             method: 'PUT',
             headers: {
                 'content-Type': 'application/json'
@@ -73,7 +74,7 @@ const ManageClasses = () => {
     }
     const handleDeny = (manageClass) => {
         setDisbled(true)
-        fetch(`http://localhost:5000/dashboard/deniedclasses/${manageClass._id}`, {
+        fetch(`https://dancewave-server-side.vercel.app/dashboard/deniedclasses/${manageClass._id}`, {
             method: 'PATCH'
         })
             .then(res => res.json())

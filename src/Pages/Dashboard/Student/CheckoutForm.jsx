@@ -29,7 +29,7 @@ const CheckoutForm = ({ selectedClass, fee }) => {
   //   }
   // }, [fee, axiosSecure])
   useEffect(() => {
-    fetch('http://localhost:5000/create-payment-intent', {
+    fetch('https://dancewave-server-side.vercel.app/create-payment-intent', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ items: selectedClass.fee })
@@ -100,7 +100,7 @@ const CheckoutForm = ({ selectedClass, fee }) => {
         showConfirmButton: false,
         timer: 1500
       })
-      fetch('http://localhost:5000/selectedclasses', {
+      fetch('https://dancewave-server-side.vercel.app/selectedclasses', {
         method: 'PATCH',
         headers: {
           'content-Type': 'application/json'
@@ -138,7 +138,7 @@ const CheckoutForm = ({ selectedClass, fee }) => {
                 name='studentname'
                 id='studentname'
                 type='text'
-                value={user.displayName}
+                value={user?.displayName}
                 readOnly
                 required
               />
@@ -152,7 +152,7 @@ const CheckoutForm = ({ selectedClass, fee }) => {
                 name='studentEmail'
                 id='studentEmail'
                 type='text'
-                value={user.email}
+                value={user?.email}
                 readOnly
                 required
               />

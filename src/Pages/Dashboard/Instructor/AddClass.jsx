@@ -6,8 +6,8 @@ import Swal from 'sweetalert2';
 const AddClass = () => {
     const categories = ['Salsa', 'Ballet', 'Classic', 'Hip-Hop'];
 
-    const { user, userData, loading } = useContext(AuthContext);
-    const currentUser = userData.find(k => user?.email === k.email);
+    const { user } = useContext(AuthContext);
+    
     const instructorName = user.displayName;
 
 
@@ -21,9 +21,9 @@ const AddClass = () => {
         const details = e.target[7].value;
         const students = [];
         const enrolledCount = students.length;
-        const newClass = {name, category, instructorName, availableSeats, image, fee, details, status: 'pending', instructorEmail: currentUser.email, enrolledCount, students}
+        const newClass = {name, category, instructorName, availableSeats, image, fee, details, status: 'pending', instructorEmail: user.email, enrolledCount, students}
         console.log(newClass);
-        fetch('http://localhost:5000/pendingclasses', {
+        fetch('https://dancewave-server-side.vercel.app/pendingclasses', {
                 method: 'POST',
                 headers: {
                     'content-Type': 'application/json'
@@ -70,7 +70,7 @@ const AddClass = () => {
                                 name='instructorname'
                                 id='instructorname'
                                 type='text'
-                                value={currentUser.name}
+                                value={user?.displayName}
                                 readOnly
                                 required
                             />
@@ -84,7 +84,7 @@ const AddClass = () => {
                                 name='instructoremail'
                                 id='instructoremail'
                                 type='text'
-                                value={currentUser.email}
+                                value={user?.email}
                                 readOnly
                                 required
                             />

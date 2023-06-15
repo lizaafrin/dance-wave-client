@@ -20,30 +20,43 @@ export const AuthContext = createContext(null);
 const auth = getAuth(app);
 
 const AuthProvider = ({ children }) => {
+    const [userRole, setUserRole] = useState(null);
     const [user, setUser] = useState('');
     const [loading, setLoading] = useState(true);
-    const [userData, setUserData] = useState([]);
-    // const [userData, setUserData] = useState([])
+    // const [userData, setUserData] = useState([]);
 
-    // console.log(user);
+
+    console.log(user);
     // const { data: usersArray = [], refetch } = useQuery({
     //     queryKey: ['usersArray'],
     //     queryFn: async () => {
-    //         const res = await fetch('http://localhost:5000/users')
+    //         const res = await fetch('https://dancewave-server-side.vercel.app/users')
     //         return res.json();
     //     }
 
     // })
     // console.log(data);
+    const getUserRole = async (email) => {
+        const res = await fetch(`https://dancewave-server-side.vercel.app/users/${email}`);
+        const result  = await res.json();
+        console.log(result);
+        return result.role;
+    }
 
     useEffect(() => {
-        fetch('http://localhost:5000/users')
-            .then(res => res.json())
+        setLoading(true);
+        if(user?.email){
+            getUserRole(user?.email)
             .then(data => {
-                setLoading(true);
-                setUserData(data);
+                setUserRole(data);
+                console.log(data);
+                setLoading(false);
             })
-    }, [])
+        }
+
+    }, [user])
+    
+    console.log(userRole);
 
     // console.log(currentUser);
 
@@ -76,31 +89,31 @@ const AuthProvider = ({ children }) => {
         const unsubscribe = onAuthStateChanged(auth, loggedUser => {
             setUser(loggedUser);
             // fethching using Axios Starts
-            if (loggedUser) {
-                axios.post('http://localhost:5000/jwt', { email: loggedUser.email })
-                    .then(data => {
-                        // console.log(data.data);
-                        localStorage.setItem('access-token', data.data.token);
-                        setLoading(false);
-                    })
-            }
-            else {
-                localStorage.removeItem('access-token');
-                setLoading(false);
+            // if (loggedUser) {
+            //     axios.post('https://dancewave-server-side.vercel.app/jwt', { email: loggedUser.email })
+            //         .then(data => {
+            //             // console.log(data.data);
+            //             localStorage.setItem('access-token', data.data.token);
+            //             setLoading(false);
+            //         })
+            // }
+            // else {
+            //     localStorage.removeItem('access-token');
 
-            }
+
+            // }
             // fethching using Axios ends
-            
+            setLoading(false);
         });
         return () => {
             unsubscribe();
         };
-    }, [user]);
+    }, []);
 
     const authInfo = {
         user,
         loading,
-        userData,
+        userRole,
         setLoading,
         createUser,
         setUser,
